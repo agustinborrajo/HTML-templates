@@ -1,0 +1,1154 @@
+<!Doctype Html>
+<Html>   
+<Head>    
+
+
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAHXSURBVFhH7ZexSsNQFIZPhCoonRz6Am3AKAotVMRJcLV2cexQSkG7+wDOOkoXEQefwL6ADhaxQ8HBDqGbDjq4VBC0aD3n3NvWNunNvYKmQz84N3+aQP7c+58ktQCggxUabCCTDsdDpWbBlNShMTADh7UIb/+a/XSbt2MxAxMDxgbsaBnsTtu/ZgvyLH2MDPDJGxnWHl6wVlJCG2Bk4IuGywprD/NYxRHmFBgZoJ6FT5b+ODEp9NE2QBdPbF0BbCruchUzYpgDIwNgxQEuFHf5ixxoG2jRQBf/wO017fgQxUo6QmuibSCJ7cdMY+2cCD0MHcutC62JlgE+qdt+twD1p5LQfmAOTNAy8E5DVk7/eRVmaP+MBh8wB/aanC0NtAwsAiY7j+IVq97gmYajKo1eDHMQaIDT7+RY08PGvSmJT6iHBv/kwTAHegbi2H6S7nMfWkX5iw8GOQg00Gs/Q3QfSIEGeu1HzO2Ca0W4mliw/SwPDEFhzctlC0BpgA/+ePu5b6dSyU/pZpO1B8pBqr9sKkYasK0CxPceB6bfvuu/87k1VeRjYCeC23H0DCzgFJaH1n4Z6/iA5RItzX1A2l1FUCUU8slXcaiEbmAgA//N+Pw3FDIMAL4Bi9hvdgpvIIIAAAAASUVORK5CYII=">
+
+<Title>   
+&#127969;---&#127760;---&#128187;
+</Title>
+<a name="top"></a>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style> 
+
+
+
+body {
+  font-family: "courier", sans-serif;
+}
+
+input[type=text] {
+  font-family: "consolas", sans-serif;
+  font-size: 10
+  width: 88%;
+  padding: 3px 3px;
+  margin: 2px 0;
+  
+  box-sizing: border-box;
+  border: none;
+  background-color:   #ffff4d;
+  color: black;
+}
+
+
+/* Main skyblue button */
+.main-btn {
+  width: 235px;
+  padding: 10px;
+  box-shadow: 6px 6px 5px yellow;
+  font-weight: bold;
+  background: #66ccfe;
+  color: black;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #D9D9D8;
+  font-size: 110%;
+  display: block;
+  position: relative;
+}
+
+/* Dropdown container */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  min-width: 235px;
+}
+
+/* Show dropdown on hover */
+.dropdown-container:hover .dropdown {
+  display: block;
+}
+
+/* Orange buttons inside dropdown */
+.dropdown input[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  background: orange;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: "Consolas", sans-serif;
+}
+.dropdown input[type="button"]:hover {
+  background: #ffcc80;
+}
+
+
+</style>
+
+</Head>
+<Body style="background-color:  white; font-size: 12px; font-family: courier">
+
+
+
+
+  </table>
+  
+
+
+<!--- EDITOR BEGINS --->
+
+<a name="editor"></a>
+<hr color=cyan>
+<hr color=yellow><hr color=pink>
+<form>
+<textarea id="txtarea" style="font-family:Consolas; font-size: 14; color:black; background-color: pink;" rows="24" cols="228" id="text"placeholder="| PLAIN TEXT | IN-BROWSER NOTEPAD |type|edit|copy|paste|SAVE|"></textarea>
+</br>
+<textarea id="txtarea" style="font-family:Consolas; font-size: 14; color:red; background-color: #fcf6e1;" rows="6" cols="228" id="text"placeholder="| PLAIN TEXT | IN-BROWSER NOTEPAD |type|edit|copy|paste|swap|"></textarea>
+</br>
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="226" placeholder="| STRING 1 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="226" placeholder="| STRING 2 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="226" placeholder="| STRING 3 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="226" placeholder="| STRING 4 |copy|paste|compare|">
+</br>
+<hr color=orange>
+
+<input type="text" id="txtarea2" style="color:yellow; background-color: black;" rows="1" size="226" id="text2" placeholder="">&nbsp;<button type="button" onclick="inanew()">&#128194;</button>&nbsp;&nbsp;</br>
+
+
+<input type="text" id="searchQuery" placeholder="..." size="226" style="color:black; background-color: #fbc7fc;">&nbsp;<button type="button" onclick="searchGoogle()">&#128269;</button>&nbsp;&nbsp;
+
+</br></br>
+
+<button type="button" onclick="download()">&#128190;</button>--<a href="data:text/html,<html contenteditable style='font-family:Consolas'>type_TXT_paste_TXT_HTML_PICS_CTRL+S_save_as_.mhtml" target="_blank" style="font-size:132;background-color:blue;">&#127751;</a>
+</br></br></br></br>
+<a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+
+<!--- EDITOR ENDS --->
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+<a href="#top" rel="noopener noreferrer" class="button button1" style='font-family:Courier'> &#128187; </a></span><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+
+</br></br>
+
+
+<a name="MENU"> 
+<hr color=yellow><hr color=orange><hr color=black>
+
+<section id="parent">
+
+<!-- GOOGLE SEARCH -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="GOOGLE SEARCH"
+         onclick="window.open('http://www.google.com')" />
+  <div class="dropdown">
+    <input type="button" value="&#128269; GOOGLE AI MODE"
+           onclick="window.open('https://www.google.com/ai?q=ai%20mode&hl=en&lr=lang_en')" />
+    <input type="button" value="&#128269; GOOGLE ADVANCED"
+           onclick="window.open('https://www.google.com/advanced_search?hl=en&lr=lang_en')" />
+    <input type="button" value="&#128269; GOOGLE IMAGE"
+           onclick="window.open('https://www.google.com/advanced_image_search?hl=en&lr=lang_en')" />
+    <input type="button" value="&#128269; GOOGLE VIDEO"
+           onclick="window.open('https://www.google.com/advanced_video_search?hl=en&lr=lang_en')" />
+    <input type="button" value="&#128250; YOUTUBE SCRATCH"
+           onclick="window.open('https://www.youtube.com/results?search_query=')" />
+  </div>
+</div>
+
+<!-- DOWNLOADED -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="DOWNLOADED"
+         onclick="window.open('file:///C:/Users/USER1234567890/Downloads/')" />
+  <div class="dropdown">
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+  </div>
+</div>
+
+<!-- PORTAL123 -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTAL123"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div>
+
+<!-- PORTAL456 -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTAL456"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div>
+
+<!-- PORTAL789 -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTAL789"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div></br>
+
+<div id="SON1" title "">
+<form>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#A" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> A </a></span>
+<a href="#B" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> B </a></span>
+<a href="#C" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> C </a></span>
+<a href="#D" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> D </a></span>
+<a href="#E" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> E </a></span>
+<a href="#F" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> F </a></span>
+<a href="#G" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> G </a></span></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#H" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> H </a></span>
+<a href="#I" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> I </a></span>
+<a href="#J" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> J </a></span>
+<a href="#K" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> K </a></span>
+<a href="#L" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> L </a></span>
+<a href="#M" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> M </a></span>
+<a href="#N" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> N </a></span></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#O" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> O </a></span>
+<a href="#P" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> P </a></span>
+<a href="#Q" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> Q </a></span>
+<a href="#R" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> R </a></span>
+<a href="#S" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> S </a></span>
+<a href="#T" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> T </a></span>
+<a href="#U" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> U </a></span></br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#V" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> V </a></span>
+<a href="#W" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> W </a></span>
+<a href="#X" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> X </a></span>
+<a href="#Y" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> Y </a></span>
+<a href="#Z" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'> Z </a></span>
+<a href="#plus" rel="noopener noreferrer" class="button button2" style="vertical-align:middle" style='font-family:Courier'>+</a></span>
+</form>
+</div>
+
+</section>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+
+<section id="parent">
+
+<!-- GOOGLE SEARCH -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="GOOGLE SEARCH"
+         onclick="window.open('http://www.google.com')" />
+  <div class="dropdown">
+    <input type="button" value="&#128269; GOOGLE AI MODE"
+           onclick="window.open('https://www.google.com/ai?q=ai%20mode&hl=en&lr=lang_en')" />
+    <input type="button" value="&#128269; GOOGLE ADVANCED"
+           onclick="window.open('https://www.google.com/advanced_search?hl=en&lr=lang_en')" />
+    <input type="button" value="&#128269; GOOGLE IMAGE"
+           onclick="window.open('https://www.google.com/advanced_image_search?hl=en&lr=lang_en')" />
+    <input type="button" value="&#128269; GOOGLE VIDEO"
+           onclick="window.open('https://www.google.com/advanced_video_search?hl=en&lr=lang_en')" />
+    <input type="button" value="&#128250; YOUTUBE SCRATCH"
+           onclick="window.open('https://www.youtube.com/results?search_query=')" />
+  </div>
+</div>
+
+<!-- DOWNLOADED -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="DOWNLOADED"
+         onclick="window.open('file:///C:/Users/USER1234567890/Downloads/')" />
+  <div class="dropdown">
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+    <input type="button" value="&#128216; DOCUMENTS"
+           onclick="window.open('file:///C:/Users/USER1234567890/Documents/')" />
+  </div>
+</div>
+
+<!-- PORTAL123 -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTAL123"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		   
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+		       <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div>
+
+<!-- PORTAL456 -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTAL456"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div>
+
+<!-- PORTAL789 -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTAL789"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div>
+
+<!-- PORTALABCD -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTALABCD"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div>
+
+<!-- PORTALEFGH -->
+<div class="dropdown-container">
+  <input type="button" class="main-btn" value="PORTALEFGH"
+         onclick="window.open('https://alink')" />
+  <div class="dropdown">
+    <input type="button" value="&#127760; IMAGE123"
+           onclick="location.href='#IMAGE123';" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+    <input type="button" value="&#127760; SITEabcd"
+           onclick="window.open('https://alink')" />
+  </div>
+</div>
+
+</section>
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<a href="#top" rel="noopener noreferrer" class="button button1" style='font-family:Courier'> &#128187; </a></span><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span></br></br>
+<a name="A"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;A&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+<a name="B"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;B&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+<a name="C"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;C&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+<a name="D"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;D&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+<a name="E"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;E&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+<a name="F"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;F&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="G"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;G&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="H"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;H&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="I"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;I&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="J"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;J&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="K"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;K&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="L"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;L&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="M"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;M&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="N"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;N&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="O"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;O&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="P"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;P&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="Q"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;Q&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="R"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;R&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="S"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;S&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="T"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;T&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="U"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;U&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="V"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;V&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="W"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;W&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="X"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;X&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="Y"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;Y&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="Z"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;Z&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+
+<a name="plus"></a></br>
+&nbsp;&nbsp;&nbsp;<a class=p0>&nbsp;+&nbsp;</a></br></br>
+
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br>
+&nbsp;&nbsp;&nbsp;<a href="https://alink" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> A LINK ></a><a class=p1 > comment | keyword | tag </a></span></br></br></br></br>
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+
+<a name="IMAGE123"></a></br>
+
+<img src="data:image/png;base64,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" alt="">
+
+</br>
+
+</br><a href="#MENU" rel="noopener noreferrer" class="button button1" style='font-family:Courier'>&#127969;</a></span>
+</br>
+</br>
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+
+<script>
+function inanew(){
+    var text = document.getElementById("txtarea2").value;
+	window.open( text, '_blank');
+ }
+</script>
+
+<script>
+function download(){
+  // Collect all textarea and text input elements in DOM order
+  const elements = [...document.querySelectorAll("textarea, input[type=text]")];
+
+  // Extract values without altering characters
+  const contents = elements.map(el => el.value);
+
+  // Join with a single carriage return between items
+  const contentToSave = contents.join("\r");
+
+  // Generate filename with timestamp
+  const now = new Date();
+  const filename = "saved_text_" +
+    now.getFullYear() + "-" +
+    String(now.getMonth() + 1).padStart(2, '0') + "-" +
+    String(now.getDate()).padStart(2, '0') + "-" +
+    String(now.getHours()).padStart(2, '0') + "-" +
+    String(now.getMinutes()).padStart(2, '0') + "-" +
+    String(now.getSeconds()).padStart(2, '0') +
+    ".txt";
+
+  // Create file blob and trigger download
+  const blob = new Blob([contentToSave], { type: "text/plain" });
+  const anchor = document.createElement("a");
+  anchor.download = filename;
+  anchor.href = window.URL.createObjectURL(blob);
+  anchor.click();
+  window.URL.revokeObjectURL(anchor.href);
+}
+</script>
+
+<script>
+function searchGoogle() {
+  const query = document.getElementById("searchQuery").value;
+  if (query.trim() !== "") {
+    const url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    window.open(url, "_blank"); // opens search in new tab
+  }
+}
+</script>
+
+
+
+</form>
+
+<style>
+
+.button {
+  font-family: consolas;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  padding: 4px;
+  width: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.button span {
+  font-family: consolas;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  font-family: consolas;
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  font-family: consolas;
+  padding-right: 10px;
+}
+
+
+
+.buttona {
+  font-family: consolas;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: red;
+  text-align: left;
+  font-size: 14px;
+  padding: 0px, 4px;
+  width: 230px;
+  transition: all 0s;
+  cursor: pointer;
+  margin: 3px;
+  opacity:1;
+  -webkit-border-radius:6px;
+  -webkit-box-orient:horizontal;
+  -webkit-box-pack:top;
+  -webkit-box-align:left;
+  -webkit-transition: -webkit-transform 0s, opacity 0s, background 0s, width 0s, height 0s;
+}
+
+
+.button1 {
+background-color: orange;
+color: black;
+border: 2px solid #04AA6E;
+}
+
+.button1:hover {
+background-color: blue;
+color: white;
+border: 2px solid #04AA6E;
+} 
+
+.button2 {
+transition: all 0s;
+background-color: #ff6600;
+color: white;
+text-decoration: none;
+border: 1px solid #04AA6E;
+}
+
+.button2:hover {
+transition: all 0s;
+background-color: blue;
+color: white;
+border: 1px solid #04AA6E;
+} 
+ 
+
+#parent {
+font: bold 14px Consolas;
+border: 1px solid white;
+display: -webkit-box;
+margin: 10px;
+color: black;
+width: 1680px;
+height: 140px;
+background: lightgrey;
+opacity:1;
+-webkit-border-radius:12px;
+-webkit-box-orient:horizontal;
+-webkit-box-pack:top;
+-webkit-box-alignt:left;
+-webkit-transition: -webkit-transform 0s, opacity 0s, background 0s, width 0s, height 0s;
+
+}
+
+.p0 {
+  font-family: Consolas;
+  font-size: 16px;
+  background-color: #ff3300;
+  color: white;
+  border: none;
+  }
+
+.p1 {
+  font-family: Courier;
+  font-size: 15px;
+  background-color: white;
+  color: green;
+  border: none;
+  }
+
+  
+.p2	 {
+  font-family: Consolas;
+  font-size: 14px;
+  background-color: #ffff66;
+  color: black;
+  border: none;
+  }
+  
+    
+
+
+</style>
+
+
+</Body> 
+</Html>
+
+ 
