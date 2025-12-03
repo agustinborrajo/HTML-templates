@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+
+<Head>
+
+<link rel="icon" href="">
+
+<Title>   
+Azure Cloud Architecture Reference Links
+</Title>
+
+<a name="top"></a>
+
+
+<body>
+<body style="background-color:  #white;">
+<meta name="viewport" content="width=device-width, initial-scale=.7">
+
+
+<style> 
+
+body {
+  font-family: "Courier", sans-serif;
+}
+
+input[type=text] {
+  font-family: "Courier", sans-serif;
+  font-size: 10
+  width: 88%;
+  padding: 3px 3px;
+  margin: 2px 0;
+  
+  box-sizing: border-box;
+  border: none;
+  background-color:   #ffff4d;
+  color: black;
+}
+</style>
+
+</Head>
+<Body>
+
+
+<style>
+
+
+
+player0 {
+ width: 100%;
+ }
+
+player1 {
+ width: 100%;
+ }
+
+player2 {
+ width: 100%;
+ }
+table, th, td {
+  border:1px solid white;
+  style="background-color:#FFFFE0;"
+}
+
+.p0 {
+  font-family: Courier;
+  font-size: 15px;
+  background-color: #fed8b1;
+  color: black;
+  border: none;
+ 
+  }
+ 
+.p0a {
+  font-family: Courier;
+  font-size: 14px;
+  background-color:  #deffff;
+  color: black;
+  border: none;  
+  }
+  
+  
+/* unvisited link */
+
+.p0a:link {
+  color: black;
+}
+
+/* visited link */
+.p0a:visited {
+  color: black;
+}
+
+/* mouse over link */	
+.p0a:hover {
+  color: red;
+}
+
+.p1 {
+  color: #3385ff;
+  background-color:  white;
+  font-family: Courier;
+  font-size: 13px
+  
+}
+
+.p1a {
+  color: black;
+  background-color: rgb(255,251,207);
+  font-family: Courier;
+  font-size: 14px
+  
+}
+
+.p2 {
+  
+  font-family: Courier;
+  font-size: 14px;
+  background-color:  #ffffe6;
+  color: black;
+  border: none;
+} 
+
+
+/* unvisited link */
+
+.p2:link {
+  color: black;
+}
+
+/* visited link */
+.p2:visited {
+  color: black;
+}
+
+/* mouse over link */	
+.p2:hover {
+  color: blue;
+}
+ 
+}
+
+
+</style>
+
+<style>
+
+.button {
+  font-family: Courier;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 4px;
+  width: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.button span {
+  font-family: Courier;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  font-family: Courier;
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  font-family: Courier;
+  color: black;
+  padding-right: 10px;
+}
+
+.button:hover span:after {
+  font-family: Courier;
+  color: black;
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+</br>
+
+<div style="width: 1800px; white-space: nowrap; align: left; overflow: hidden;">
+
+<a name="top"></a>
+
+</br>
+<a href="about: blank" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier' > <<< </a></span>
+</br>
+
+
+<hr color=yellow><hr color=orange><hr color=black>
+<a class=p0>[ Azure Cloud Architecture Alphabetic Links ]</a></br>
+</br>
+<a href="#A" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> A </a></span>
+<a href="#B" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> B </a></span>
+<a href="#C" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> C </a></span>
+<a href="#D" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> D </a></span>
+<a href="#E" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> E </a></span>
+<a href="#F" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> F </a></span>
+<a href="#G" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> G </a></span></br>
+<a href="#H" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> H </a></span>
+<a href="#I" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> I </a></span>
+<a href="#J" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> J </a></span>
+<a href="#K" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> K </a></span>
+<a href="#L" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> L </a></span>
+<a href="#M" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> M </a></span>
+<a href="#N" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> N </a></span></br>
+<a href="#O" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> O </a></span>
+<a href="#P" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> P </a></span>
+<a href="#Q" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> Q </a></span>
+<a href="#R" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> R </a></span>
+<a href="#S" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> S </a></span>
+<a href="#T" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> T </a></span>
+<a href="#U" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> U </a></span></br>
+<a href="#V" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> V </a></span>
+<a href="#W" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> W </a></span>
+<a href="#X" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> X </a></span>
+<a href="#Y" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> Y </a></span>
+<a href="#Z" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> Z </a></span>
+<a href="#plus" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'>+</a></span>
+<a href="about: blankITTXT/" rel="noopener noreferrer" target="_blank" class="button" style="vertical-align:middle" style='font-family:Courier'>&#128458;</a></span>
+</br>
+
+</br>
+<a class=p0>[ Azure Cloud Architecture Reference Links ]</a></br>
+<hr color=blue>
+                           &#128187; <a href="https://portal.azure.com" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > AZURE PORTAL ------------>> portal.azure.com ---------------> Microsoft Azure Management </a></br>
+		               &#128187; <a href="https://resources.azure.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > AZURE RESOURCES --------->> resources.azure.com ------------> Microsoft Azure Resources </a></br>
+		                   &#128187; <a href="https://shell.azure.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > AZURE SHELL ------------->> shell.azure.com ----------------> Microsoft Azure Cloud Shell </a></br>
+                       &#128187; <a href="https://entra.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT ENTRA --------->> entra.microsoft.com ------------> Microsoft Entra Portal </a></br>
+                    &#128187; <a href="https://security.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT DEFENDER ------>> security.microsoft.com ---------> Microsoft Defender Portal </a></br>		   
+                      &#128187; <a href="https://intune.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT INTUNE -------->> intune.microsoft.com -----------> Microsoft Intune Portal </a></br>		
+                       &#128187; <a href="https://admin.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT 365 ----------->> admin.microsoft.com ------------> Microsoft 365 Admin Portal </a></br>
+                       &#128187; <a href="https://admin.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT EXCHANGE------->> admin.exchange.microsoft.com ---> Microsoft Exchange Admin Portal </a></br>		   
+                   &#128187; <a href="https://myaccount.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT ACCOUNT ------->> myaccount.microsoft.com --------> Microsoft Account Portal </a></br>
+	               &#128187; <a href="https://mysignins.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT SIGN-INs ------>> mysignins.microsoft.com --------> Microsoft Sign-Ins Portal </a></br>
+              &#128187; <a href="https://myapplications.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MS APPLICATIONS --------->> myapplications.microsoft.com ---> Microsoft Applications Portal </a></br>
+	 		     &#128187; <a href="https://appmigration.microsoft.com" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MS APP MIGRATIONS ------->> appmigration.microsoft.com -----> Microsoft Application Migration Tools </a></br>
+		    	 &#128187; <a href="https://learn.microsoft.com/en-us/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MS LEARNING PORTAL ------>> learn.microsoft.com ------------> Microsoft Learning Portal </a></br>
+                &#128187; <a href="https://servicetrust.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MS SRV TRUST PORTAL ----->> servicetrust.microsoft.com -----> Microsoft Service Trust Portal </a></br>
+             &#128187; <a href="https://developer.microsoft.com/en-us/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MS DEVELOPER PORTAL ----->> developer.microsoft.com --------> Microsoft Developer Portal </a></br>
+	&#128187; <a href="https://datacenters.microsoft.com/globe/explore" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MS DATACENTERS PORTAL --->> datacenters.microsoft.com ------> Microsoft Datacenters Portal </a></br>
+	                &#128187; <a href="https://azure.status.microsoft/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MS AZURE STATUS PORTAL -->> azure.status.microsoft ---------> Microsoft Azure Status / Azure Outages / Azure Down </a></br>
+	                          &#128187; <a href="https://msportals.io/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" > MICROSOFT ALL PORTALS --->> msportals.io -------------------> Microsoft Portals (comprehensive list) </a></br>
+<hr color=blue>
+<a href=" https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Overview " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; AZURE PORTAL > AZURE POLICY COMPLIANCE MENU BLADE   > </a><a class=p1 > <--- Azure Subscription Resources </a></span>  </br>
+<a href=" https://portal.azure.com/#view/Microsoft_AAD_IAM/SecurityMenuBlade/~/SecurityCenter " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; AZURE PORTAL > AZURE SECURITY CENTER MENU BLADE   > </a><a class=p1 > <--- Azure Subscription Resources </a></span>  </br>
+<a href=" https://portal.azure.com/#view/Microsoft_Azure_Expert/AdvisorMenuBlade/~/Security " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; AZURE PORTAL > AZURE ADVISOR MENU BLADE > </a><a class=p1 > <--- Azure Subscription Resources </a></span>  </br>
+<a href=" https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/0 " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; AZURE PORTAL > MICROSOFT DEFENDER FOR CLOUD MENU BLADE > </a><a class=p1 > <--- Azure Subscription Resources </a></span>  </br>
+<a href=" https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/costanalysis " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; AZURE PORTAL > AZURE COST ANALYSIS MENU BLADE > </a><a class=p1 > <--- Azure Subscription Resources </a></span>  </br>
+<a href=" https://portal.azure.com/#view/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/~/overview " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; AZURE PORTAL > AZURE MONITOR MENU BLADE > </a><a class=p1 > <--- Azure Subscription Resources </a></span>  </br>
+<a href=" https://portal.azure.com/#view/HubsExtension/BrowseAll " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; AZURE PORTAL > BROWSE ALL RESOURCES  > </a><a class=p1 > <--- Azure Subscription Resources </a></span>  </br>
+	<hr color=lightblue>
+<a href="https://github.com/Azure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; GITHUB &#128572; > AZURE ALL > Public repositories > github.com ></a></br>
+<a href="https://github.com/MicrosoftDocs/azure-docs" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; GITHUB &#128572; > AZURE DOCS > Public repositories > github.com ></a></br>
+<a href="https://github.com/Azure/login" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; GITHUB &#128572; > AZURE LOGIN > Public repositories > github.com > Federated Indentity Credentials </a></br>
+<a href="https://github.com/Azure/azure-quickstart-templates" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; GITHUB &#128572; > AZURE QUICK START TEMPLATES > Public repositories > github.com > ARM | BICEP | TERRAFORM >> </a></br>
+<a href="https://github.com/Azure-Samples" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#128187; GITHUB &#128572; > AZURE SAMPLES > Public repositories > github.com ></a></br>
+<a href="https://azure.github.io/Azure-Verified-Modules/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >&#129302; GITHUB.io  > AZURE VERIFIED MODULES > AVM > Bicep Templates | Terraform ></a></br>
+<hr color=orange>
+<a href="https://learn.microsoft.com/en-us/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" >> AZURE > LEARN > LEARNING PATH MICROSOFT > SANDBOX + CERTIFICATIONS ></a><a class=p1 > hands-on : certification : Azure Portal Sandbox </a></span> </br>
+
+<a href="https://learn.microsoft.com/en-us/certifications/azure-administrator/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" >> AZURE > AZURE ADMINISTRATOR ASSOCIATE > LEARNING PATH MICROSOFT ></a><a class=p1 > certification dashboard : AZ-104 : certification details : proctored </a></span> </br>
+<a href="https://learn.microsoft.com/en-us/certifications/azure-administrator/renew/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" >> AZURE > AZURE ADMINISTRATOR ASSOCIATE > RE-NEW CERTIFICATIONS ></a><a class=p1 > certification dashboard : AZ-104 : re-new certification path : unproctored : left_bar/creds/certif </a></span> </br>
+<a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" >> AZURE > AZURE ADMINISTRATOR ASSOCIATE > RE-NEW CERTIFICATIONS &#8680; Renew this certification &#8678; </a><a class=p1 > certification dashboard : AZ-104 : re-new certification path : eligible </a></span> </br>
+<a href="https://learn.microsoft.com/en-us/users/me/certifications/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" >> AZURE > AZURE ADMINISTRATOR ASSOCIATE > ALL MY CERTIFICATIONS ></a><a class=p1 > certification dashboard : AZ-104 : re-new certification : MCID # </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/certifications/azure-solutions-architect/" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" >> AZURE > AZURE SOLUTIONS ARCHITECT EXPERT > LEARNING PATH MICROSOFT ></a><a class=p1 > AZ-305 : certification : EXPERT</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/paths/design-identity-governance-monitor-solutions/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design identity, governance, and monitor solutions ></a><a class=p1 >  governance : authn : authz : log : monitor</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-governance/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design identity, governance, and monitor solutions >> Design governance ></a><a class=p1 >  governance : management groups : subscriptions : resource groups : resource tagging : policies : RBAC : blueprints</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-governance/11-summary-resources" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design identity, governance, and monitor solutions >> Design governance > Summary + Resources ></a><a class=p1 >  Azure Docs : Self-Paced : Hands-On </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design identity, governance, and monitor solutions >> Design authentication and authorization solutions ></a><a class=p1 >  IAM : AAD B2B + B2C : conditional access : identity protection : service principals : keyvault</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/12-summary-resources" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design identity, governance, and monitor solutions >> Design authentication and authorization solutions > Summary + Resources ></a><a class=p1 >  Azure Docs : Self-Paced : Hands-On</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design identity, governance, and monitor solutions >> Design a solution to log and monitor Azure resources ></a><a class=p1 >  data sources : log analytics : workbooks + insights : data explorer : performance efficiency</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/paths/design-business-continuity-solutions/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design business continuity solutions ></a><a class=p1 > high availability : backup : disaster recovery</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-for-high-availability/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design business continuity solutions >> Design for high availability ></a><a class=p1 >  front door : traffic manager : ha compute : ha data store</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design business continuity solutions >> Design a solution for backup and disaster recovery ></a><a class=p1 >  blob : files : backup : vm : site recovery</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/paths/design-data-storage-solutions/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design data storage solutions ></a><a class=p1 >  non-relational data : relational data : design data integration  </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design data storage solutions > Design a data storage solution for non-relational data ></a><a class=p1 >  storage accounts : redundancy : blobs : files : disk solution : security  </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design data storage solutions > Design a data storage solution for relational data ></a><a class=p1 >  sql : sql managed : sql vm : scalability : availability : rest : transmission : cosmos db tables </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-data-integration/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design data storage solutions > Design data integration ></a><a class=p1 >  data factory : data lake : databricks : synapse analytics : hot : warm : stream analytics : data analysis </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/paths/design-infranstructure-solutions/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design infrastructure solutions ></a><a class=p1 >  compute solution : VM : azure app services : kubernetes : functions : logic apps : APP architecture : network : migrations</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design infrastructure solutions > Design a compute solution ></a><a class=p1 >  vm : batch : app services : container instances : functions : logic apps : kubernetes</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design infrastructure solutions > Design an application architecture ></a><a class=p1 >  messaging : event hub : event driven solution : API integration : application configuration management : caching</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design infrastructure solutions > Design network solutions ></a><a class=p1 >  on-premise to azure virtual networks : network connectivity : application delivery : application protection services </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/design-migrations/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Design infrastructure solutions > Design migrations ></a><a class=p1 >  cloud adoption framework : azure migration framework : on-premises workloads : migration tools : db migration : online storage : migrate offline data</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/paths/azure-well-architected-framework/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Build great solutions with the Microsoft Azure Well-Architected Framework ></a><a class=p1 >  cost : operational excellence : performance efficiency : reliabiliy : security : </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/azure-well-architected-introduction/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Build great solutions with the Microsoft Azure Well-Architected Framework > Introduction ></a><a class=p1 >  cost optimization : operational excellence : performance efficiency : reliability : security</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/azure-well-architected-cost-optimization/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Build great solutions with the Microsoft Azure Well-Architected Framework > Cost optimization ></a><a class=p1 >  plan : estimate : provision optimization : monitoring : analytics : cost insights : efficiency cloud spend</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/azure-well-architected-operational-excellence/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Build great solutions with the Microsoft Azure Well-Architected Framework > Operational excellence ></a><a class=p1 >  design : build : orchestrate : monitoring : analytics : operational insights : automation : testing</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/azure-well-architected-performance-efficiency/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Build great solutions with the Microsoft Azure Well-Architected Framework > Performance efficiency ></a><a class=p1 >  scale up : scale out : optimize network performance : optimize storage : identify bottlenecks</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/azure-well-architected-reliability/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Build great solutions with the Microsoft Azure Well-Architected Framework > Reliability ></a><a class=p1 >  high availability architecture : disaster recovery strategy : backup : restore</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/azure-well-architected-security/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Build great solutions with the Microsoft Azure Well-Architected Framework > Security ></a><a class=p1 >  defense in depth : identity management : infrastructure protection : encryption : network security : application security</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/paths/cloud-adoption-framework/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure ></a><a class=p1 >  strategy : data-drive plan : azure landing zone : migrate through repeatable process and common tools : govern methodology </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-getting-started/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Getting started ></a><a class=p1 >  customer narrative : common blockers : knowledge check </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-strategy/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Prepare for successful cloud adoption with a well-defined strategy ></a><a class=p1 >  key results : business case : financial</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-plan/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Prepare for cloud adoption with a data-driven plan ></a><a class=p1 >  assess digital state : customize cloud adoption plan</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-ready/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Choose the best Azure landing zone to support your requirements for cloud operations ></a><a class=p1 >  operating models</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-migrate/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Migrate to Azure through repeatable processes and common tools ></a><a class=p1 >  migration tools : process : server migration</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-govern/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Address tangible risks with the Govern methodology of the Cloud Adoption Framework for Azure ></a><a class=p1 >  governance : policies </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-manage/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Ensure stable operations and optimization across all supported workloads deployed to the cloud ></a><a class=p1 >  baseline : specialization </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/innovate-applications-with-azure-cloud-technologies/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Innovate applications by using Azure cloud technologies ></a><a class=p1 >  innovation lifecycle : infuse AI : business impact : learn process</a></span> </br>
+<a href="https://docs.microsoft.com/en-us/learn/modules/cloud-adoption-framework-security/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Accelerate cloud adoption with the Microsoft Cloud Adoption Framework for Azure > Prepare for cloud security by using the MS Cloud Adoption Framework for Azure ></a><a class=p1 >  implementation : security Tools : Policies </a></span> </br>
+
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+<hr color=orange>
+<a href="https://www.youtube.com/watch?v=vq9LuCM4YP4" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Designing Microsoft Azure Infrastructure Solutions Study Cram ></a><a class=p1 > http://www.onboardtoazure.com/ technical training : 3h38m video :</a></span> </br>
+<a href="https://www.youtube.com/playlist?list=PLlVtbbG169nHSnaP4ae33yQUI3zcmP5nP" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Designing Microsoft Azure Infrastructure Solutions Study Playlist ></a><a class=p1 > http://www.onboardtoazure.com/ technical training : +10 Hs Video / 15 Vids </span> </br>
+<a href="https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Related Azure Administrator AZ-104 Study Playlist & Master Classes ></a><a class=p1 > http://www.onboardtoazure.com/ technical training : +35 Hs Video / 28 Vids </span> </br>
+<a href="https://thecloudmarathoner.com/index.php/2022/02/11/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > Self-paced study guide ></a><a class=p1> Cloud Marathoner blog :</a></span> </br>
+<a href="https://www.paddymaddy.com/az-305-study-guide/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > paddymaddy.com > Study Guide ></a><a class=p1 >  links : self-paced : microsoft path : </a></span> </br>
+<a href="https://www.youtube.com/playlist?list=PLboJ9yx0c_SXqNZ6FrIZx6jVnTbD_MCx6" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > paddymaddy.com > Azure > 240+ Youtube Videos ></a><a class=p1 >  youtube playlist : 247 videos :</a></span> </br>
+<a href="https://www.youtube.com/playlist?list=PLKHIhZJiQ5AmnEQ5ABfDXqNa6Ygh394Pr" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-400 > @Cloud360_Solutions > Azure > Designing and Implementing Microsoft DevOps ></a><a class=p1 >  youtube playlist : 21 videos :</a></span> </br>
+<a href="https://www.youtube.com/playlist?list=PLlrxD0HtieHjzqIRjPoERUGj49rve3rCM" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-400 > @MicrosoftDeveloper > Azure > Use Bicep to deploy your Azure infrastructure as code ></a><a class=p1 >  youtube playlist : 15 videos :</a></span> </br>
+
+<hr color=orange>
+
+<a href=" https://learn.microsoft.com/en-us/certifications/azure-security-engineer/?tab=tab-learning-paths " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-500 > Azure Security Engineer ></a><a class=p1 > learning path + sub modules </a></span> </br>
+
+<hr color=orange>
+
+<a href=" https://learn.microsoft.com/en-us/training/courses/AZ-700T00?WT.mc_id=esi_m2l_content_wwl&ocid=%20#study-guide " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > AZ-700T00 > Designing and Implementing Microsoft Azure Networking Solutions ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Introduction to Azure Virtual Networks ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/design-implement-hybrid-networking/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Design and implement hybrid networking ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/design-implement-azure-expressroute/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Design and implement Azure ExpressRoute ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/load-balancing-non-https-traffic-azure/?ns-enrollment-type=Collection&ns-enrollment-id=kox0iz3xxxy80j " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Load balance non-HTTP(S) traffic in Azure ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/load-balancing-https-traffic-azure/?ns-enrollment-type=Collection&ns-enrollment-id=kox0iz3xxxy80j " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Load balance HTTP(S) traffic in Azure
+ ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/design-implement-network-security-monitoring/?ns-enrollment-type=Collection&ns-enrollment-id=kox0iz3xxxy80j " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Design and implement network security
+ ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/design-implement-private-access-to-azure-services/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Design and implement private access to Azure Services ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/training/modules/design-implement-network-monitoring/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > Design and implement network monitoring ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > About VPN devices and IPsec/IKE parameters for Site-to-Site VPN Gateway connections ></a><a class=p1 > learning path + sub modules </a></span> </br>
+<a href=" https://aka.ms/esilabs " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > ESILABS > enterprise skills initiative > </a><a class=p1 > LABS via Training Key and Enrollment </a></span> </br>
+
+<hr color=orange>
+
+<a href=" https://learn.microsoft.com/en-us/certifications/azure-fundamentals/?tab=tab-learning-paths " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-900 > AZURE FUNDAMENTALS > learning path > </a><a class=p1 > LABS via Training Key and Enrollment </a></span> </br>
+
+<hr color=orange>
+
+<a href=" https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-104 " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-104 > STUDY GUIDE > AZURE ADMINISTRATOR > </a><a class=p1 > LEARN / SANDBOX / PRACTICE </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-305 " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-305 > STUDY GUIDE > AZURE ARCHITECT > </a><a class=p1 > LEARN / SANDBOX / PRACTICE </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-500 " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-500 > STUDY GUIDE > AZURE SECURITY > </a><a class=p1 > LEARN/SANDBOX/PRACTICE </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-700 " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > STUDY GUIDE > AZURE NETWORK > </a><a class=p1 > LEARN/SANDBOX/PRACTICE </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/certifications/resources/study-guides/sc-300 " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SC-300 > STUDY GUIDE > AZURE IDENTITY > </a><a class=p1 > LEARN/SANDBOX/PRACTICE </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/certifications/resources/study-guides/az-900 " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-900 > STUDY GUIDE > AZURE FUNDAMENTALS > </a><a class=p1 > LEARN/SANDBOX/PRACTICE </a></span> </br>
+
+<hr color=orange>
+
+<a href=" https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-104 > INTERACTIVE LAB SIMULATIONS > ADMINISTRATOR > LABS SELECTOR > </a><a class=p1 > microsoftlearning.github.io </a></span> </br>
+<a href=" https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-104 > INTERACTIVE LAB SIMULATIONS > ADMINISTRATOR > </a><a class=p1 > microsoftlearning.github.io </a></span> </br>
+<a href=" https://microsoftlearning.github.io/AZ-204-DevelopingSolutionsforMicrosoftAzure/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-204 > INTERACTIVE LAB SIMULATIONS > DEVELOPING SOLUTIONS > </a><a class=p1 > microsoftlearning.github.io </a></span> </br>
+<a href=" https://microsoftlearning.github.io/AZ500-AzureSecurityTechnologies/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-500 > INTERACTIVE LAB SIMULATIONS > SECURITY > </a><a class=p1 > microsoftlearning.github.io </a></span> </br>
+<a href=" https://microsoftlearning.github.io/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-700 > INTERACTIVE LAB SIMULATIONS > NETWORKING ></a><a class=p1 > microsoftlearning.github.io </a></span> </br>
+<a href=" https://microsoftlearning.github.io/SC-300-Identity-and-Access-Administrator/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SC-300 > INTERACTIVE LAB SIMULATIONS > IDENTITY AND ACCESS MANAGEMENT ></a><a class=p1 > microsoftlearning.github.io </a></span> </br>
+<a href=" https://github.com/MicrosoftLearning " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-LAB > INTERACTIVE LAB SIMULATIONS > GITHUB > MICROSOFT LEARNING ></a><a class=p1 > microsoftlearning.github.io </a></span> </br>
+<a href=" https://github.com/Azure " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZ-GIT > AZURE GITHUB > AZURE GITHUB.COM SPACE ></a><a class=p1 > APIs|SDKs|open_source_projects|Microsoft_Azure </a></span> </br>
+<a href=" https://github.com/MicrosoftDocs " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MS-GIT > AZURE GITHUB > MICROSOFT DOCS > GITHUB.COM SPACE ></a><a class=p1 > APIs|SDKs|open_source_projects|Microsoft_Azure </a></span> </br>
+<a href=" https://github.com/MicrosoftDocs/azure-docs/tree/main/articles " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MS-GIT > AZURE GITHUB > AZURE DOCS GITHUB.COM > TREE structured format ></a><a class=p1 > ARTICLES | SNAPSHOTS | CODE > </a></span> </br>
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+<hr color=orange>
+
+<a href=" https://github.com/MicrosoftDocs/azure-docs/tree/main/articles " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DOCS > GITHUB TREE STRUCTURE > </a><a class=p1 > docs + articles + diagrams + azure portal snapshots </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/azure/governance/policy/how-to/get-compliance-data " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DOCS > AZURE POLICY COMPLIANCE > </a><a class=p1 > docs </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/azure/security/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DOCS > AZURE SECURITY > </a><a class=p1 > docs </a></span> </br>
+<a href=" https://learn.microsoft.com/en-us/microsoft-365/security/defender/portals?view=o365-worldwide " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DOCS > AZURE SECURITY PORTALS M365 > </a><a class=p1 > docs  </a></span>  </br>
+<a href=" https://learn.microsoft.com/en-us/azure/advisor/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DOCS > AZURE ADVISOR > </a><a class=p1 > docs </a></span>  </br>
+<a href=" https://learn.microsoft.com/en-us/azure/azure-monitor/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DOCS > AZURE MONITOR > </a><a class=p1 > docs </a></span>  </br>
+<a href=" https://learn.microsoft.com/en-us/azure/defender-for-cloud/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DOCS > AZURE DEFENDER FOR CLOUD  > </a><a class=p1 > docs </a></span>  </br> <hr color=orange>
+<a href=" https://learn.microsoft.com/en-us/azure/architecture/browse/ " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE ARCH > BROWSE AZURE ARCHITECTURE  > </a><a class=p1 > designs : graphs : explanations </a></span>  </br>
+
+<hr color=orange>
+
+<a href=" https://datacenters.microsoft.com/globe/explore " rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MICROSOFT DATACENTERS > GLOBE > EXPLORE > </a><a class=p1 > <--- 3D|Power|Network|Planet|Global </a></span>  </br><hr color=blue>
+<hr color=blue>
+
+<a name="A"></a>
+<hr color=orange>
+<hr color=black>
+
+
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br></br>
+<a class=p0>[ A ]</a></br></br>
+
+<a href="https://portal.azure.com" rel="noopener noreferrer" target="_blank" class="p0a" style="text-decoration:none" >> AZURE PORTAL > portal.azure.com > Microsoft Azure Management ></a></br>
+</br>
+<a href="https://learn.microsoft.com/en-us/training/paths/implement-access-management-for-apps/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ACCESS MANAGEMENTS FOR APPS > SC-300 > SSO > INTEGRATION > Enterprise APP > APP registration ></a></br>
+<a href="https://janbakker.tech/access-reviews-for-azure-ad-directory-roles/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ACCESS REVIEWS > Azure AD Directory Roles > AAD ></a></br>
+<a href="https://www.youtube.com/watch?v=DLmlFlQGQWo" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > Beginner to Pro > Live Event ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/modules/data-integration-azure-data-factory/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > Data Integration > Azure Synapse Pipeline ></a></br>
+<a href="https://www.youtube.com/results?search_query=adam+marczak+azure+adf" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > ETL > Data Flow ></a></br>
+<a href="https://www.youtube.com/@azurecontentannu6399/playlists" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > real-time scenario > mapping data flows > pipelines > </a></br>
+<a href="https://learn.microsoft.com/en-us/azure/data-factory/tutorial-managed-virtual-network-on-premise-sql-server" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > SQL > How to access on-premises SQL Server from Data Factory Managed VNet using Private Endpoint ></a></br>
+<a href="https://www.mssqltips.com/sqlservertip/6064/azure-data-factory-stored-procedure-activity-transformation-activities/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > SQL > Stored Procedure > Stored Procedure Activity Transformation Activities ></a></br>
+<a href="https://www.youtube.com/watch?v=i-XgprCWRIw" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > SQL > Stored Procedure > How to Use with Parameter in Copy Activity ></a></br>
+<a href="https://www.youtube.com/watch?v=M-XOR7NECqQ" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > SQL > Multiple Stored Procedures > paramaters > generate files dynamically ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/data-factory/transform-data-using-stored-procedure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADF > Azure Data Factory > SQL > Stored Procedure > transformation activity ></a></br>
+<a href="https://cloudinfrastructureservices.co.uk/adfs-vs-azure-ad-how-authentication-has-evolved/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ADFS vs AAD > how authentications has evolved ></a></br>
+<a href="https://github.com/public-apis/public-apis" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APIs > Public APIs > learning & testing Azure WebAPPs ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APP OBJECTS and SERVICE PRINCIPALS > service principal objects ></a></br>
+<a href="https://cloudinfrastructureservices.co.uk/azure-app-registration-vs-enterprise-app-whats-the-difference/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APP REGISTRATION vs ENTERPRISE APP > what is the difference ></a></br>
+<a href="https://cloudsecbytes.medium.com/azure-ad-app-registration-enterprise-applications-c89fc6b0fa37" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> Application Registration vs Enterprise Applications > comparative chart ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/app-service/environment/app-service-app-service-environment-custom-settings#change-tls-cipher-suite-order" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APP SERVICE ENVIRONMENT > Custom configuration settings|TLS|ciphers ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APPLICATION MANAGEMENT > AZURE ACTIVE DIRECTORY > AAD ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-migration" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APPLICATION MANAGEMENT > AZURE ACTIVE DIRECTORY > AAD DEVELOP > ADAL to MSAL migration ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/develop/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APPLICATION MANAGEMENT > AZURE ACTIVE DIRECTORY > AAD DEVELOP > MICROSOFT ENTRA ID ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/application-proxy-configure-single-sign-on-with-kcd" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> APPLICATION PROXY > CONFIGURE SSO with KCD > single sign on > kerberos constrained delegation ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/architect-modern-apps/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ARCHITECT MODERN APPLICATIONS in AZURE > Docker|Containers|ACR|Kubernetes|Cache for Redis ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/architect-migration-bcdr/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ARCHITECT MIGRATION > BUSINESS CONTINUITY > DISASTER RECOVERY > On-Premise|AzureSiteRecovery|scalesets|Geographically distributed application ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/architect-storage-infrastructure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ARCHITECT STORAGE INFRASTRUCTURE > workload > Azure Storage Explorer ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/virtual-network/application-security-groups" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ASG > APPLICATION SECURITY GROUPS > VNET ></a></br>
+<a href="https://florinloghiade.ro/azure-application-security-groups/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ASG > APPLICATION SECURITY GROUPS > Portal + CLI commands ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-visual-studio-code?tabs=CLI" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ARM TEMPLATES > Quickstart: Create ARM templates with Visual Studio Code >> IaC > Infrastructure as Code >> </a></br>
+<a href="https://azureops.org/articles/automatically-delete-old-files-from-azure-storage-account/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AUTOMATICALLY DELETE FILES > Azure Storage Account ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AUTOSCALE > VM > VIRTUAL MACHINE SCALE SETS ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/virtual-machines/availability" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AVAILABILITY OPTIONS > AZURE VIRTUAL MACHINES ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE ACTIVE DIRECTORY > Azure AD > AAD|B2B|B2C|PIM|EXTids|CA|IP|AUTH|MON ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-design-concepts" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AD CONNECT > design concepts > sourceAnchor|attributes|GUID|custom installation|ADFS|3rd party federation|AAD sign-in|UPN|hybrid ></a></br>
+<a href="https://www.youtube.com/watch?v=4Ip3h4kJxmw" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AD JOINED > SSO Access to AD Joined Resources ></a></br>
+<a href="https://techcommunity.microsoft.com/t5/itops-talk-blog/what-s-the-difference-between-azure-roles-and-azure-ad-roles/ba-p/2363647" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AD ROLES vs AZURE ROLES > Global Admin | Tenant |root_MG|Owner|Contributor|Subscription Owner|RG|resource ></a></br>
+<a href="https://blog.syscloud.com/azure-administrative-units" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE ADMINISTRATIVE UNITS ></a></br>
+<a href="https://www.testpreptraining.com/tutorial/setting-up-staging-environments-in-azure-app-service/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE APP SERVICE > setting up staging environments ></a></br>
+<a href="https://www.microsoftpressstore.com/articles/article.aspx?p=3145766#:~:text=Each%20subscription%20supports%20the%20deployment,Service%20plan%20with%20100%20instances" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE APP SERVICE > detailed OVERVIEW by Pearson ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-sync-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AUTHENTICATION AND SYNCHRONIZATION PROTOCOLS > Header-based-auth|LDAP|OAUTH2|OIDC|PASSW SSO|ssh|SAML|Kerberos ></a></br>
+<a href="https://success.outsystems.com/documentation/11/developing_an_application/secure_the_application/end_users/end_users_authentication/configure_azure_ad_authentication/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AUTHENTICATION LOW-CODE NO-CODE ></a></br>
+<a href="https://blog.bytebytego.com/p/password-session-cookie-token-jwt" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AUTHENTICATION RELATED > Password|Session|Cookie|Token|JWT|SSO|OAuth > Authentication Explained > Part 1 ></a></br>
+<a href="https://blog.bytebytego.com/p/password-session-cookie-token-jwt-ec1" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AUTHENTICATION RELATED > Password|Session|Cookie|Token|JWT|SSO|OAuth > Authentication Explained > Part 2 ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/storage/common/authorize-data-access" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AUTHORIZE ACCESS TO DATA IN AZURE STORAGE > SAS|account_key|AAD|ADDS|local_users|comparison-table|types_of_account ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/availability-zones/az-region" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE AVAILABILITY ZONES > Azure AZ > regions : geographies : redundancy : migration ></a></br>
+<a href="https://jorgebernhardt.com/azure-bastion" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE BASTION > AzureBastionSubnet > az commands > step-by-step ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/data-processing-with-azure-adls/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE DATA LAKE > Large-Scale Data Processing > Azure Data Lake Storage Gen2 ></a></br>
+<a href="https://learn.microsoft.com/en-us/answers/questions/820318/a-deleted-azure-front-door-(classic)-resource-cont" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE FRONT DOOR > Deleted Azure Front Door (classic) continues to renew certificates > </a></br>
+<a href="https://josh-ops.com/posts/azure-frontdoor-preview-experience/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE FRONT DOOR > tips and tricks > experience > </a></br>
+<a href="https://cloudinfrastructureservices.co.uk/azure-marketplace-solutions" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE MARKETPLACE SOLUTIONS > cloudinfrastructureservices.co.uk ></a></br>
+<a href="https://github.com/Azure-Samples" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE SAMPLES > Public repositories > github.com ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure-stack/operator/azure-stack-app-service-overview?view=azs-2206" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE STACK HUB > Azure APP Service > Azure Functions ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE SUBSCRIPTION SERVICE LIMITS > APPS|VNETS|PUBLIC IPs|LB|VNG ></a></br>
+
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+
+<a name="B"></a></br>
+<hr color=orange>
+<a class=p0>[ B ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/external-identities/b2b-fundamentals" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2B > business to business : Azure AD B2B : collaboration ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/external-identities/what-is-b2b" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2B > business to business : Azure AD B2B : what is B2B ></a></br>
+<a href="https://learn.microsoft.com/en-us/power-platform/admin/invite-users-azure-active-directory-b2b-collaboration" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2B > invite users : collaboration ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2C > business to customer : Azure AD B2C : overview ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory-b2c/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2C > business to customer : Azure AD B2C : user experience ></a></br>
+<a href="https://www.youtube.com/watch?v=U2Temcn-hes" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2* > difference-between-azure-ad-b2b-and-b2c : best video explanation ></a></br>
+<a href="https://learn.microsoft.com/en-us/answers/questions/1068313/difference-between-azure-ad-b2b-and-b2c" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2* > difference-between-azure-ad-b2b-and-b2c : Q&A ></a></br>
+<a href="https://learn.g2.com/user-management-in-b2b-vs-b2c" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2* > difference-between-azure-ad-b2b-and-b2c : user management ></a></br>
+<a href="https://condatis.com/news/blog/azure-ad-b2b-or-b2c/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2* > difference-between-azure-ad-b2b-and-b2c : which one is for me ? ></a></br>
+<a href="https://www.predicagroup.com/blog/azure-ad-b2b-b2c-puzzled-out/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2* > difference-between-azure-ad-b2b-and-b2c : puzzled-out ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory-b2c/cookie-definitions" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> B2C > cookie definitions : CSRF ></a></br>
+<a href="https://jorgebernhardt.com/azure-bastion" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BASTION > AzureBastionSubnet > az commands > step-by-step ></a></br>
+<a href="https://bluexp.netapp.com/blog/azure-anf-blg-azure-backup-service-8-ways-to-backup-with-azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BACKUP > BACK-UPs > Azure Backup Service > 8 ways to backup with Azure></a></br>
+<a href="https://web.archive.org/web/20130928115120/www.orbit-computer-solutions.com/BGP.php" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BGP > Border Gateway Protocol > webarchive ></a></br>
+<a href="https://www.youtube.com/playlist?list=PLlrxD0HtieHjzqIRjPoERUGj49rve3rCM" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP LEARN LIVE > Learn Live - Use Bicep to deploy your Azure infrastructure as code > 15 Lessons > @MicrosoftDeveloper >> </a></br>
+<a href="https://www.youtube.com/playlist?list=PLfr5_hAgPfYERnRrLCg5vochII7Ys3qJh" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP LEARN AUTOMATION > Automation on Azure > 15 Lessons > @mrautomation >> </a></br>
+<a href="https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=azure-cli" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > Quickstart: Create Bicep files with Visual Studio Code >> IaC > Infrastructure as Code >> </a></br>
+<a href="https://github.com/Azure/bicep" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > GITHUB > Azure BICEP >> IaC > Infrastructure as Code >> </a></br>
+<a href="https://github.com/Azure/bicep-registry-modules/tree/main" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > GITHUB > Azure BICEP REGISTRY MODULES >> IaC > Infrastructure as Code >>  </a></br>
+<a href="https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/virtual-machine#Usage-examples" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > GITHUB > Azure BICEP REGISTRY MODULES >> IaC > Infrastructure as Code >> VM usage example > </a></br>
+<a href="https://github.com/Azure/Azure-Verified-Modules" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > GITHUB.com > AZURE VERIFIED MODULES > AVM >> IaC > Infrastructure as Code >> </a></br>
+<a href="https://azure.github.io/Azure-Verified-Modules/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > GITHUB.io >> AZURE VERIFIED MODULES > AVM >> IaC > Infrastructure as Code >> </a></br>
+<a href="https://www.youtube.com/playlist?list=PLm0VCJgNxnpduY86JQVqd5wbiyd2xWe7e" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > Our Cloud School > bee-a-learner > YT Playlist > E2E >> </a></br>
+<a href="https://dev.to/search?utf8=%E2%9C%93&q=bicep" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > DEV.TO > CODE + ARTICLES + SNIPPETS >> </a></br>
+<a href="https://dev.to/massimobonanni/series/20270" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > DEV.TO > Bicep for Dummies > Keyvault + VM + IIS + VNET >> </a></br>
+<a href="https://dev.to/omiossec/create-a-github-pipeline-to-test-review-and-deploy-a-bicep-template-h45" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > DEV.TO > Create a GitHub pipeline to test, review, and deploy a Bicep template. >> </a></br>
+<a href="https://dev.to/search?utf8=%E2%9C%93&q=bicep" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > DEV.TO > CODE + ARTICLES + SNIPPETS >> </a></br>
+<a href="https://dev.to/search?utf8=%E2%9C%93&q=bicep+pipelines" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BICEP TEMPLATES > DEV.TO > CODE + ARTICLES + SNIPPETS >>-->> PIPELINES -->> </a></br>
+<a href="https://learn.microsoft.com/en-us/azure/architecture/browse/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> BROWSE AZURE ARCHITECTURE ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="C"></a></br>
+<hr color=orange>
+<a class=p0>[ C ]</a></br></br>
+<a href="https://www.entrust.com/es/knowledgebase/ssl/how-to-generate-certificate-signing-request-using-microsoft-management-console-mmc-on-windows-2008" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CERTIFICATES > CSR CREATION > GENERATE ON MMC > ENTRUST : azure related </a></br>
+<a href="https://www.sslshopper.com/csr-decoder.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CERTIFICATES > CSR DECODER CHECKER : azure related </a></br>
+<a href="https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-certificate?tabs=apex#private-certificate-requirements" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CERTIFICATES > PFX CERTS > PRIVATE CERTIFICATE REQUIREMENTS : azure related </a></br>
+<a href="https://www.oxabox.com/how-to-create-a-pfx-certificate-from-a-cer-certificate/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CERTIFICATES > PFX from CER > EXPORT THE PRIVATE KEY : azure related </a></br>
+<a href="https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-bindings" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CERTIFICATES > SSL BINDINGS : azure related </a></br>
+<a href="https://www.whizlabs.com/blog/microsoft-azure-cheat-sheet/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CHEAT SHEET > glossary : terms : service : description ></a></br>
+<a href="https://www.youtube.com/@checkpoint/search?query=azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CHECKPOINT > Check Point CloudGuard > CNAPP > Azure integrations ></a></br>
+<a href="https://www.checkpoint.com/mind/self-study-resources/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CHECKPOINT > checkpoint.com > documentation + blog > Self Study Resources ></a></br>
+<a href="https://waf-doc.inext.checkpoint.com/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CHECKPOINT > checkpoint.com > documentation WAF > Check Point CloudGuard WAF documentation ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CHOOSE AZURE COMPUTE SERVICE > candidate service : hosting model : scalability : availability : security : cost ></a></br>
+<a href="https://cidr.xyz/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CIDR > IP ranges >
+<a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CLOUD ADOPTION FRAMEWORK > strategy : migrate : manage : govern ></a></br>
+<a href="https://www.youtube.com/watch?v=_S4w_yLMzuY"" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CNAPP > Implementing a CNAPP Strategy to Embed Security From Code to Cloud >
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CONDITIONAL ACCESS > active directory : CA ></a></br>
+<a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-conditions" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CONDITIONAL ACCESS > CONDITIONS ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/administer-containers-in-azure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CONTAINERS > administer containers in Azure ></a></br>
+<a href="https://azure.microsoft.com/services/container-registry/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CONTAINER REGISTRY > repository > Azure Security Center ></a></br>
+<a href="https://azure.microsoft.com/en-gb/products/container-instances/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CONTAINER INSTANCES > Elastic Bursting > AKS ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/app-service/deploy-continuous-deployment?tabs=github" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CONTINUOUS DEPLOYMENT > Azure App Service ></a></br>
+<a href="https://www.geeksforgeeks.org/difference-between-local-storage-session-storage-and-cookies/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> COOKIES > LOCAL STORAGE vs SESSION STORAGE ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/custom-script-windows" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CUSTOM SCRIPT EXTENSIONS > Windows ></a></br>
+<a href="https://www.youtube.com/watch?v=2Qu5gQjNQh4&list=PLlVtbbG169nHcbeVtWUfP8BeEjGniBJeb" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CYBERSECURITY ARCHITECTURE > SC-100 > learn.onboardtoazure.com ></a></br>
+<a href="https://www.youtube.com/@MicrosoftSecurity/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> CYBERSECURITY > MICROSOFT SECURITY > VIDEO CHANNEL ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="D"></a>
+<hr color=orange>
+<a class=p0>[ D ]</a></br></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/deploy-a-website-with-azure-app-service/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DEPLOY a WEBSITE to AZURE > Azure App Service > Visual Studio | Containerized > </a></br> 
+<a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DEPLOY and MANAGE > AZURE COMPUTE RESOURCES > VMs|Azure Automation State Configuration ></a></br> 
+<a href="https://learn.microsoft.com/en-us/troubleshoot/azure/app-service/web-apps-deployment-faqs" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DEPLOYMENT > FAQ > Azure Web Apps ></a></br> 
+<a href="https://timmyreilly.azurewebsites.net/using-deployment-slot-settings-in-azure-web-apps/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DEPLOYMENT SLOTS > Azure Web Apps ></a></br> 
+<a href="https://learn.microsoft.com/en-us/azure-stack/operator/azure-stack-app-service-configure-deployment-sources?view=azs-2206&pivots=version-2022h1" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DEPLOYMENT SOURCES > Azure Stack ></a></br> 
+<a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725702(v=ws.11)" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DIRECTORY > dsquery user -samid thelanid -d thedomain ></a></br> 
+<a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732535(v=ws.11)" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DIRECTORY > dsget user "CN_OU_DC_comma_string" -memberof ></a></br> 
+<a href="https://learn.microsoft.com/en-us/answers/questions/257611/disabling-week-tls-weak-ciphers-on-azure-app-servi.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DISABLE WEAK TLS CIPHERS > Azure APP Service > ARM ></a></br> 
+<a href="https://learn.microsoft.com/en-us/training/paths/implement-disaster-recovery-windows-server-premises/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DISASTER RECOVERY > Windows Servers > On-Premise and Hybrid Environments ></a></br> 
+<a href="https://www.ictshore.com/networking-fundamentals/dns-cname-ptr-records/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DNS > CNAME record > PTR records > explained ></a></br> 
+<a href="https://github.com/Huachao/azure-content/blob/master/articles/dns/dns-domain-delegation.md" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DNS > DNS domain delegation > github > explained + commands></a></br> 
+<a href="https://learn.microsoft.com/en-us/azure/dns/dns-operations-recordsets-portal" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DNS > Manage DNS records > Record sets > using Azure portal ></a></br> 
+<a href="https://www.linode.com/docs/guides/dns-overview/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DNS > DNS RECORDS > |A|AAAA|AXFR|CAA|CNAME|DKIM|MX|NS|PTR|SOA|SPF|SRV|TXT| > how DNS works ></a></br> 
+<a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=redhat" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DNS > Name resolution for resources in Azure virtual networks > Zones ></a></br> 
+<a href="https://docs.docker.com/engine/docker-overview/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DOCKER > OVERVIEW ></a></br> 
+<a href="https://docs.docker.com/desktop/install/windows-install/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DOCKER > WINDOWS INSTALL > wsl2 : containers ></a></br> 
+<a href="https://docs.docker.com/docker-for-windows/install/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DOCKER > DESKTOP > install ></a></br> 
+<a href="https://docs.docker.com/reference/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DOCKER > REFERENCE > documentation ></a></br>
+<a href="https://docs.docker.com/engine/reference/builder/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DOCKER > REFERENCE > builder ></a></br>
+<a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DOCKER FILES > BEST PRACTICES > documentation ></a></br> 
+<a href="https://docs.microsoft.com/en-us/azure/?product=all" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> DOCUMENTATION > ALL AZURE DOCUMENTS > languages ></a></br> 
+
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="E"></a>
+<hr color=orange>
+<a class=p0>[ E ]</a></br></br>
+<a href="https://esi.learnondemand.net/User/Dashboard" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ENTERPRISE SKILLS INITIATIVE > LEARNONDEMAND > LABS ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/event-grid/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> EVENTS GRID > handler : stream from Event Hubs : react to relevant events   ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/event-hubs/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> EVENTS HUB > capture : scalability : ingest millions of events  ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/external-identities/external-identities-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> EXTERNAL IDENTITIES > B2B collaboration : B2B direct connect : B2C ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="F"></a>
+<hr color=orange>
+<a class=p0>[ F ]</a></br></br>
+<a href="https://learn.microsoft.com/en-us/azure/firewall/tutorial-firewall-deploy-portal" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> FIREWALL > Azure firewall > deploy : create : vnet : vm ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> FUNCTIONS > Azure functions > events : messaging : triggers : bindings ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="G"></a>
+<hr color=orange>
+<a class=p0>[ G ]</a></br></br>
+<a href="https://git-scm.com/download/win" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GIT > download for Windows > installers ></a></br>
+<a href="https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > Configuring OpenID Connect in Azure > Use OIDC within your workflows to authenticate with Azure > Create GitHub Secrets > repo/settings/secrets/actions >> </a></br>
+<a href="https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation-create-trust?pivots=identity-wif-apps-methods-azp#configure-a-federated-identity-credential-on-an-app" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > Configure a federated identity credential on an APP to trust an external identity provider > Workload-ID | Workload Identity Federation >> </a></br>
+<a href="https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure-openid-connect" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > Use the Azure Login action with OpenID Connect > Create GitHub secrets > Set up Azure Login action with OpenID Connect in GitHub Actions workflows >> </a></br>
+<a href="https://github.com/Azure/login" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > AZURE LOGIN > Public repositories > github.com > Federated Indentity Credentials > Login With OpenID Connect (OIDC) for its usage > </a></br>
+<a href="https://docs.github.com/en/actions/concepts/security/openid-connect#configuring-the-oidc-trust-with-the-cloud" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > GITHUB DOCS > OpenID Connect allows your workflows to exchange short-lived tokens directly from your cloud provider > </a></br>
+<a href="https://dev.to/pwd9000/bk-1iij" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > GitHub Actions Authentication Methods for Azure > dev.to > </a></br>
+<a href="https://dev.to/pwd9000/integrating-azure-key-vault-for-secrets-with-github-action-workflows-part-2-111h" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > Integrating Azure Key Vault for Secrets with GitHub Action Workflows > dev.to > </a></br>
+<a href="https://www.youtube.com/watch?v=XkhkkLBkAT4" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB ACTIONS > GitHub Azure AD OIDC Authentication > video + whiteboard + links > </a></br>
+<a href="https://dev.to/pwd9000/series/24311" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GITHUB PRO TIPS SERIES > 6 > dev.to > </a></br>
+<a href="https://yourdts.com/2021/05/27/office-365-usage-locations-2/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GEOFENCING > usage location ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-glossary-cloud-terminology" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> GLOSSARY > cloud > terms ></a></br>
+
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="H"></a>
+<hr color=orange>
+<a class=p0>[ H ]</a></br></br>
+<a href="https://learn.microsoft.com/en-us/training/modules/implement-high-availability-of-windows-server-vms/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> High Availability > Windows VMs ></a></br> 
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/signin-realm-discovery" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> HOME REALM DISCOVERY > HRD > Azure AAD > sign-in ></a></br> 
+<a href="https://codepen.io/amjayesh07/pen/bGBPMxx" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> HTML FORMS > SAVE DATA TO FILE ></a></br> 
+<a href="https://blog.bytebytego.com/p/how-does-https-work-episode-6" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> HTTPS > HOW DOES HTTPS WORK > AZURE RELATED ></a></br> 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="I"></a>
+<hr color=orange>
+<a class=p0>[ I ]</a></br></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/azure-administrator-manage-identities-governance/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IDENTITIES and GOVERNANCE > Manage Identities > Users|Groups|AAD|Active Directory|B2B|self-service password reset|RBAC|RoleBasedAccessControl|MFA ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/azure-administrator-manage-identities-governance/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IDENTITIES and ACCESS > Azure Sentinel > Azure Key Vault > OpenID Connect > Azure AD join ></a></br>
+<a href="https://techcommunity.microsoft.com/t5/itops-talk-blog/what-s-the-difference-between-azure-active-directory-identity/ba-p/1320887" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> Identity Protection | Conditional Access > difference between > sign-in attempts vs user risk ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-policies" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> Identity Protection Policies > MFA registration policy > sign-in risk policy > CA policy > user risk policy ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk?WT.mc_id=itopstalk-blog-socuff" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> Investigate Risk > risky users > risky sign-in > risk detection > Azure AD threat intelligence detection ></a></br>
+<a href="https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IP > understanding IP addresses subnets and CIDR notation for networking ></a></br>
+<a href="https://www.ipconvertertools.com/cidr2ipranges" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IP CONVERTER TOOLS > CIDR TO IP RANGES CONVERTER > IP calculator ></a></br>
+<a href="https://www.ipconvertertools.com/iprange2cidr" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IP CONVERTER TOOLS > IP RANGES TO CIDR CONVERTER > IP calculator ></a></br>
+<a href="https://www.subnet-calculator.com/subnet.php" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IP CONVERTER TOOLS > IP SUBNET-CALCULATOR > IP calculator ></a></br>
+<a href="https://blog.pichuang.com.tw/azure-subnets.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IP CONVERTER TOOLS > VISUAL SUBNET CALCULATOR > IP calculator > AZURE EDITION + ''divide'' ></a></br>
+<a href="https://jodies.de/ipcalc" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IP CONVERTER TOOLS > jodies.de > IP calculator ></a></br>
+<a href="https://www.pynetlabs.com/what-is-ipsec-internet-protocol-security/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> IPSEC Protocols > Authentication Header (AH) + Encapsulating security payload (ESP) + Internet Key Exchange (IKE) ></a></br>
+
+
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="J"></a>
+<hr color=orange>
+<a class=p0>[ J ]</a></br></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="K"></a>
+<hr color=orange>
+<a class=p0>[ K ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> KEYVAULT > CONCEPTS > tenant : owner : consumer : HSM : security principal : managed identity : roles ></a></br> 
+<a href="https://learn.microsoft.com/en-us/samples/azure-samples/app-service-msi-keyvault-dotnet/keyvault-msi-appservice-sample/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> KEYVAULT > USE > Key Vault > App Service > Azure Managed Identity ></a></br> 
+<a href="https://github.com/Azure-Samples/app-service-msi-keyvault-dotnet" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> KEYVAULT > USE > Key Vault > App Service > Azure Managed Identity > GITHUB ></a></br> 
+<a href="https://pixelrobots.co.uk/2020/06/azure-kubernetes-service-aks-system-and-user-node-pools/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> KUBERNETES > AKS > USER NODE POOLS ></a></br> 
+<a href="https://dewolfs.github.io/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> KUBERNETES > AKS > Focus on cloud-native application architectures using container technologies on Microsoft Azure > dewolfs.github.io ></a></br> 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="L"></a>
+<hr color=orange>
+<a class=p0>[ L ]</a></br></br>
+<a href="https://learn.microsoft.com/en-us/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> LEARN > MICROSOFT LEARNING PATH > SANDBOX > RE-NEW CERTIFICATIONS ></a><a class=p1 > HANDS-ON : certification : Azure Portal Sandbox </a></span> </br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> LOCKS > RESOURCE LOCKS > scope : inheritance / who : managed apps ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="M"></a>
+<hr color=orange>
+<a class=p0>[ M ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MANAGED IDENTITIES > resources : VMs : scale sets : system-assigned : user-assigned ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/governance/management-groups/overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MANAGEMENT GROUPS > hierarchy : rbac : movements : limitations ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MFA > multi factor authentication > how it works ></a></br>
+<a href="https://learn.microsoft.com/en-us/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MICROSOFT > LEARN > LEARNING PATH MICROSOFT > SANDBOX > RE-NEW CERTIFICATIONS ></a><a class=p1 > HANDS-ON : certification : Azure Portal Sandbox </a></span> </br>
+<a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-storage-introduction" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MICROSOFT DEFENDER FOR STORAGE > Threat Intelligence : storage accounts ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/migrate-dotnet-apps-azure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MIGRATE ASP.NET APPS to AZURE > On-Premises | OnPremise | On Premises | Azure Pipelines ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/site-recovery/migrate-tutorial-on-premises-azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MIGRATE ON-PREMISE MACHINES TO AZURE > Azure Migrate > Site Recovery ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-monitor/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MONITOR > Azure Monitor Log / Log Analytics : App insights : metrics : alerts  ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/azure-administrator-monitor-backup-resources/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MONITOR AND BACKUP > Azure resources > metrics explorer|reliability ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MOVE RESOURCES > new RG : new subscr : checklist ></a></br>
+<a href="https://myapplications.microsoft.com/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MYAPPLICATIONS > myapplications.microsoft.com > Portal ></a></br> 
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/myapps-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> MYAPPS > Portal Overview > AAD > Azure Active Directory ></a></br> 
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="N"></a>
+<hr color=orange>
+<a class=p0>[ N ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> NSG > NETWORK SECURITY GROUPS > rules > inbound > outbound ></a></br> 
+<a href="https://www.atmosera.com/blog/what-is-application-security-group-in-azure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> NSG vs ASG > when to use which ></a></br> 
+<a href="https://www.kainos.com/insights/blogs/microsoft-azure-nsgs-asgs-simplified" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> NSG vs ASG > simplified ></a></br> 
+<a href="https://docs.microsoft.com/en-us/azure/virtual-network/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> NETWORK > VIRTUAL NETWORK > traffic > routing ></a></br> 
+<a href="https://learn.microsoft.com/en-us/training/paths/architect-network-infrastructure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> NETWORK INFRASTRUCTURE ARCHITECTURE > OnPremises|Azure|VPN|site-to-site|ExpressRoute|AzureTrafficManager|Spokes|ApplicationGateway ></a></br> 
+<a href="https://learn.microsoft.com/en-us/training/paths/implement-network-security/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> NETWORK SECURITY > IMPLEMENT > encrypt > end-to-end > DDoS > Firewall ></a></br>
+<a href="https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvm?view=azps-9.1.0" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> New-AzVM > PowerShell > Create Virtual Machine ></a></br> 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="O"></a>
+<hr color=orange>
+<a class=p0>[ O ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> OAUTH2 and OIDC : MS Identity Platform > bearer token | APP registration > roles ></a></br> 
+<a href="https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> OAUTH2 : Microsoft identity platform and OAuth 2.0 authorization code flow > oauth2-auth-code-flow ></a></br> 
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-oidc" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> OIDC : OPEN Id CONNECT AUTHENTICATION > use when > trusted agent ></a></br> 
+<a href="https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols-oidc" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> OIDC : OpenID Connect on the Microsoft identity platform ></a></br> 
+<a href="https://www.google.com/search?hl=en&as_q=azure+guest+user+oidc+account+validation+authenticator&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=lang_en&cr=&as_qdr=all&as_sitesearch=&as_occt=any&as_filetype=&tbs=" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> OIDC : azure guest user oidc account validation authenticator ></a> &#128064;</br> 
+<a href="https://www.geeksforgeeks.org/layers-of-osi-model/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> OSI MODEL : LAYERS > P.D.N.T.S.P.A ></a></br> 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="P"></a>
+<hr color=orange>
+<a class=p0>[ P ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-phs" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PASSWORD HASH SYNCRONIZATION > PHS > AAD ></a></br>
+<a href="https://www.microsoft.com/security/blog/2019/05/30/demystifying-password-hash-sync/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PASSWORD HASH SYNCRONIZATION > demystifying 1 > what is and is not ></a></br>
+<a href="https://security4cloud.fr/2019/07/04/demystifying-password-hash-sync/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PASSWORD HASH SYNCRONIZATION > demystifying 2 > what is and is not ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-authentication-passwordless" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PASSWORDLESS AUTHENTICATION AZURE > FIDO2 > Authenticator > Windows Hello ></a></br>
+<a href="https://learn.microsoft.com/en-us/entra/identity/authentication/concept-password-ban-bad-on-premises" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PASSWORD PROTECTION > Enforce on-premises Microsoft Entra Password Protection for Active Directory Domain Services ></a></br>
+<a href="https://learn.microsoft.com/en-us/entra/identity/authentication/howto-password-ban-bad-on-premises-deploy" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PASSWORD PROTECTION > Plan and deploy on-premises Microsoft Entra Password Protection ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/governance/policy/overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> POLICY > DEFINITION > governance > built-in : initiatives : audit ></a></br>
+<a href="https://www.powershellgallery.com/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> POWERSHELL > POWERSHELL GALLERY > packages | modules | scripts ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/dns/private-dns-autoregistration" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PRIVATE DNS > AUTO-REGISTRATION > autoregistration : virtual link ></a></br>
+<a href="https://blog.tyang.org/2023/01/26/using-azure-policy-to-create-dns-records-for-private-endpoints" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PRIVATE DNS > Using Azure Policy to Create DNS Records for Private Endpoints ></a></br>
+<a href="https://www.youtube.com/watch?v=Jne4L3Dbzd8&list=PLcFcktZ0wnNk7XuHP9_il8LzS3lkaq-ZG" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> PYTHON > AZURE PYTHON TUTORIAL > YT playlist > @SigmaCoding > </a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="Q"></a>
+<hr color=orange>
+<a class=p0>[ Q ]</a></br></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="R"></a>
+<hr color=orange>
+<a class=p0>[ R ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> RBAC > ROLE BASED ACCESS CONTROL > overview : security principal ></a></br>
+<a href="https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> RBAC > ROLE BASED ACCESS CONTROL > permissions-reference ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/backup/backup-azure-recovery-services-vault-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> RECOVERY SERVICES VAULT > VMs and AZURE SQL in VMs > overview : rbac : soft delete ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> RESOURCE LOCKS > scope : inheritance / who : managed apps ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> RESOURCE TAGS > management hierarchy : naming : billing : limitations ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-risks" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> RISK > what is : identity protection : risk detection ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="S"></a>
+<hr color=orange>
+<a class=p0>[ S ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-saml" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SAML AUTHENTICATION > use when : tokens : SSO ></a></br>
+<a href="https://cloudinfrastructureservices.co.uk/saml-vs-sso-whats-the-difference/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SAML vs SSO > Pros and Cons > Other protocols > Providers ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/modules/build-app-with-scale-sets/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SCALABLE APPLICATIONS > Virtual Machine Scale Sets ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/how-to-connect-sso-quick-start" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SEAMLESS SINGLE SIGN ON > AAD > SSO ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/secure-your-cloud-data/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SECURE CLOUD DATA > security threats > security policies > Azure Storage > Azure KeyVault > RBAC ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SERVICE BUS >  connects APPS + SVCS > on-prem <-> cloud </a></br> 
+<a href="https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SERVICE ENDPOINT >  Azure Backbone > on-prem limitations <-> Express Route </a></br> 
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SERVICE LIMITS > subscriptions limits : quotas : constraints ></a></br> 
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SERVICE PRINCIPALS > APPs and SP Objects in Azure AD : relationships ></a></br>
+<a href="https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/virtual-network/service-tags-overview.md" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SERVICE TAGS > VNETS > GITHUB ></a></br>
+<a href="https://www.cloudpartner.fi/?p=5035" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SERVICE TAGS > INBOUND/OUTBOUND > GRAPHS > PORTAL ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/azure-sql/database/database-export?view=azuresql" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SQL EXPORT TO BACPAC FILE ></a></br>
+<a href="https://www.youtube.com/playlist?list=PL7lHGw4UHu-uTekpkgVB031NWEBy1rAoN" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SQL INJECTION LABS > PORTSWIGGER > AZURE SQL DB RELATED ></a></br>
+<a href="https://learn.microsoft.com/en-us/sql/tools/sqlpackage/sqlpackage?view=sql-server-ver16" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SQLPACKAGE ></a></br>
+<a href="https://codez.deedx.cz/posts/how-to-ssh-into-web-app-instance/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SSH into WEB APP INSTANCE > AZURE CLI > PORTAL ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> STAGING ENVIRONMENT > SETUP > Azure App Service ></a></br>
+<a href="https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-simulate-risk?WT.mc_id=itopstalk-blog-socuff" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SIMULATE RISK DETECTION > Anonymous IP address : Unfamiliar sign-in properties : Atypical travel : User risk policy : Sign-in risk security policy ></a></br> 
+<a href="https://www.youtube.com/watch?v=7SU5S0WtNNk" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SSO > SINGLE SIGN ON > ENTERPRISE APPLICATION > CONFIGURATION ></a></br>
+<a href="https://www.youtube.com/watch?v=poQCJK0WPUk" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SSO > SINGLE SIGN ON > ENTERPRISE APPLICATION > TROUBLESHOOT ></a></br>
+<a href="https://www.youtube.com/watch?v=9JKFqCZw_cc" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SSO > SINGLE SIGN ON > HOW IT WORKS > FLOW DIAGRAMS ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/architect-storage-infrastructure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> STORAGE INFRASTRUCTURE > ARCHITECTURE > workload > Azure Storage Explorer ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/azure-administrator-manage-storage/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> STORAGE > IMPLEMENT and MANAGE > Azure Administrators ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/store-data-in-azure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> STORE DATA IN AZURE > Azure Storage Account > Azure Blob Storage ></a></br>
+<a href="https://www.calculator.net/ip-subnet-calculator.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SUBNET CALCULATOR ></a></br>
+<a href="https://ipcalculator.com/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SUBNET CALCULATOR > IP calculator ></a></br>
+<a href="https://calculator.boson.com/calculator" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SUBNET CALCULATOR > IP calculator > previous/next subnet > boson.com ></a></br>
+<a href="https://labvirtual.webs.upv.es/ipcalc.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> SUBNET CALCULATOR > Universitat Polit&egrave;cnica de Val&egrave;ncia > </a></br>
+
+
+
+
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="T"></a>
+<hr color=orange>
+<a class=p0>[ T ]</a></br></br>
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TAGS > RESOURCES : RG : SUBSCRIPTIONS > management hierarchy : naming : billing : limitations ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/templates/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TEMPLATES > Azure Templates > ARM Templates > Bicep Templates > Terraform Templates >></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/developer/terraform/terraform-handler-for-azure-copilot/generate-terraform-configuration-using-copilot" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TERRAFORM TEMPLATES > Generate Terraform on Azure configurations using Copilot >> IaC > Infrastructure as Code >> </a></br>
+<a href="https://learn.microsoft.com/en-us/graph/auth/auth-concepts" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > Authentication and authorization basics : Get an access token > Get access without a user > Get access on behalf of a user ></a></br>
+<a href="https://learn.microsoft.com/en-us/graph/auth-v2-user?tabs=http" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > Get access on behalf of a user : Request an access token + Use the access token to call Microsoft Graph ></a></br>
+<a href="https://learn.microsoft.com/en-us/entra/identity-platform/id-tokens" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > ID tokens in the Microsoft identity platform ></a></br>
+<a href="https://learn.microsoft.com/en-us/entra/identity-platform/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > DOCS : Microsoft identity platform documentation ></a></br>
+<a href="https://github.com/nextcloud/integration_onedrive/issues/13" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > ERROR : unauthorized_client: The client does not exist or is not enabled for consumers ></a></br>
+<a href="https://www.google.com/search?q=get+bearer+token+for+azure+graph+api" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > GOOGLE_search : get bearer token for azure graph api ></a></br>
+<a href="https://learn.microsoft.com/en-us/graph/overview" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > Microsoft Graph > Overview of Microsoft Graph | APIs | Users | Groups | APPs | Authn | Authz ></a></br>
+<a href="https://learn.microsoft.com/en-us/graph/api/user-list" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > Microsoft Graph > List users > Permissions > HTTP requests | headers | body | response | bearer token ></a></br>
+<a href="https://learn.microsoft.com/en-us/graph/use-postman" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > Microsoft Graph > Use Postman with the Microsoft Graph API ></a></br>
+<a href="https://www.youtube.com/watch?v=LdGDgRDr4bg" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > Microsoft Techy Tips : generate Azure Bearer Access Token Using Postman | Microsoft Graph API ></a></br>
+<a href="https://stackoverflow.com/questions/75751477/how-to-get-a-microsoft-azure-authorization-token" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> TOKENS > token related > stackoverflow.com : How to get a Microsoft Azure Authorization Token ></a></br>
+
+
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="U"></a>
+<hr color=orange>
+<a class=p0>[ U ]</a></br></br>
+<a href="https://azure.github.io/AppService/2020/05/15/Robust-Apps-for-the-cloud.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> Ultimate Guide to Running Healthy Apps in the Cloud > Robust APPs ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="V"></a>
+<hr color=orange>
+<a class=p0>[ V ]</a></br></br>
+<a href="https://www.classace.io/answers/you-have-an-azure-subscription-that-contains-a-virtual-machine-named-vm1-and-a-storage-account-named-storage1-you-need-to-ensure-that-vm1-can-access-storage1-by-using-the-azure-backbone-what-should-yo" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> VIRTUAL MACHINE > VMs > access storage using Azure Backbone > AI answer ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> VIRTUAL NETWORKS > VNETS > Configure and Manage > Azure Admnistrators ></a></br>
+<a href="https://learn.microsoft.com/en-us/training/paths/azure-administrator-manage-virtual-networks/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> VIRTUAL NETWORKS > VNETS > Configure and Manage > Azure Admnistrators Training ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> VIRTUAL NETWORK LINKS > VNETS > Private DNS Zone > registration ></a></br>
+<a href="https://learn.microsoft.com/en-us/azure/virtual-network/vnet-integration-for-azure-services#compare-private-endpoints-and-service-endpoints" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> VIRTUAL NETWORK LINKS > VNETS > VNET integration > Private Endpoint vs Service Endpoint > azure backbone ></a></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="W"></a>
+<hr color=orange>
+<a class=p0>[ W ]</a></br></br>
+<a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> WSL2 > LINUX KERNEL UPDATE PACKAGE > containerized applications : dockerimage : dockerfile : registry : runtime : repositories ></a></br> 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+<a name="X"></a>
+<hr color=orange>
+<a class=p0>[ X ]</a></br></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+<a name="Y"></a>
+<hr color=orange>
+<a class=p0>[ Y ]</a></br></br>
+ 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="Z"></a>
+<hr color=orange>
+<a class=p0>[ Z ]</a></br></br>
+<a href="https://www.cayosoft.com/microsoft-entra/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ZERO TRUST PRINCIPLES > Implementing Zero Trust Security with Microsoft Entra ></a></br> 
+<a href="about: blankIT/zero_trust_azure_entra_id.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> ZERO TRUST CHECKLIST > ZERO TRUST : A checklist applicable to Microsoft Entra ID (Azure AD) ></a></br> 
+</br>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+
+<a name="plus"></a>
+<hr color=orange>
+<a class=p0>[ + ]</a></br></br>
+<a href="https://www.youtube.com/@MicrosoftDeveloper/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > Microsoft Developer > @MicrosoftDeveloper > explore | discover | build solutions > </a></br>
+<a href="https://www.youtube.com/@NTFAQGuy/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > John Savill >> @NTFAQGuy > savilltech.com > learn.onboardtoazure.com >>>> Whiteboard Supported Diagrams > </a></br>
+<a href="https://github.com/johnthebrit/AzureMasterClass" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > John Savill >> Azure MasterClass + GitHub/johnthebrit >> Azure Architect > MVP >>>>>  AZURE-THEORY ></a></br>
+<a href="https://www.youtube.com/@AndyMaloneMVP/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > Andy Malone > @AndyMaloneMVP > Microsoft Defender | Cryptography | Powershell >></a></br>
+<a href="https://www.youtube.com/@Cloud360_Solutions" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > Navneet Kumar > @Cloud360_Solutions > Cloud360 Training | LABS | Hands-On Tutorials >></a></br>
+<a href="https://www.youtube.com/@GregariousTechnology/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > @GregariousTechnology > Intune | Intune Autopilot Hybrid Entra AD Join | GPOs | LAPS | TPM | PIM | BYOD | CA | MFA >></a></br>
+<a href="https://www.youtube.com/@bearded365guy/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > Jonathan Edwards > @bearded365guy > Microsoft 365 | Intune | BitLocker | Defender Endpoint | CybserSecurity | Conditional Access With Microsoft 365 >></a></br>
+<a href="https://www.youtube.com/@PetterTech/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > PetterTech >> Azure Bicep + GitHub >> Azure Architect > MVP > hands-on + VSC ></a></br>
+<a href="https://www.youtube.com/@TechWorldwithNana/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > TechWorld with Nana > Large Number of Tutorials ></a></br>
+<a href="https://www.youtube.com/@RobertoPrevato86/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > @RobertoPrevato86 >> Python + GitHub + Bicep + Docker ></a></br>
+<a href="https://www.youtube.com/@acloudguru/search?query=Cloud%20Builder%20Live" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > @acloudguru > Cloud Builder Live > A Cloud Guru >></a></br>
+<a href="https://www.youtube.com/@OurCloudSchool/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > @OurCloudSchool > Our Cloud School > bee-a-learner > Azure Data Factory / Bicep >></a></br>
+<a href="https://github.com/KamalRathnayake/MeetKamalToday./tree/main" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > GITHU / Code + Templates > KamalRathnayake/MeetKamalToday >>>></a></br>
+<a href="https://www.youtube.com/@mrautomation/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > @mrautomation > Mr Automation > Docker / Bicep / PowerShell >> gh/mwhooo </a></br>
+<a href="https://www.youtube.com/@ByteByteGo/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > @ByteByteGo > Key Concepts explained in less than 5 minutes ></a></br>
+<a href="https://www.youtube.com/@TinyTechnicalTutorials/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > AWS >> @TinyTechnicalTutorials >> AMAZON WEB SERVICES > to-compare-with-Azure ></a></br>
+<a href="https://www.youtube.com/@itsnextwork" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > AWS >> @itsnextwork > Amazon Web Services > playlists > </a></br>
+<a href="https://www.youtube.com/playlist?list=PL8O9iwxpgTOKL1WeeFkyd_-zPUmtxZxTY" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > technical-training > AWS > ALL AWS PROJECTS > @itsnextwork > </a></br>
+<a href="https://www.youtube.com/@z3nsh3ll/playlists" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > cybersec-training > z3nsh3ll >></a></br>
+<hr color=orange>
+<a href="https://www.aquasec.com/cloud-native-academy/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > AQUASEC > cloud-native-academy >> comprehensive resource hub >> In-depth tech guides >></a></br>
+<a href="https://www.aquasec.com/cloud-native-academy/cloud-compliance/azure-compliance/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > AQUASEC /cloud-native-academy/cloud-compliance/azure-compliance/ >></a></br>
+<a href="https://www.aquasec.com/cloud-native-academy/cspm/azure-security-best-practices/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > AQUASEC /cloud-native-academy/cspm/azure-security-best-practices/ >></a></br>
+<a href="https://www.aquasec.com/cloud-native-academy/cspm/cloud-security/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > AQUASEC /cloud-native-academy/cspm/cloud-security/ >></a></br>
+<a href="https://www.aquasec.com/cloud-native-academy/cnapp/cnapp-vs-cspm/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > AQUASEC /cloud-native-academy/cnapp/cnapp-vs-cspm/ >></a></br>
+<hr color=orange>
+<a href="https://www.youtube.com/@MicrosoftSecurityCommunity/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > MICROSOFT SECURITY COMMUNITY > @MicrosoftSecurityCommunity | MDVM > Defender >></a></br>
+<a href="https://www.youtube.com/@Cloudsecuritytraining/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > VULNERABILITY SCANNERS > @Cloudsecuritytraining | Rapid7 | VAT >></a></br>
+<a href="https://www.youtube.com/@Cybertalk-with-YOU/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > VULNERABILITY SCANNERS > @Cybertalk-with-YOU > Cloud Security Training + Consulting > Rapid7 >></a></br>
+<a href="https://www.youtube.com/@CyberTechnicalknowledge/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > VULNERABILITY SCANNERS > @CyberTechnicalknowledge > Rapid7 | Microsoft Defender | MDVM | Prisma Cloud >></a></br>
+<a href="https://www.youtube.com/@NTFAQGuy/search?query=cybersecurity" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > John Savill > AZ-500 SC-300 SC-100 > @NTFAQGuy > Rapid7 | Microsoft Defender + other clouds AWS GCP | Sentinel >></a></br>
+<a href="https://www.youtube.com/@AndyMaloneMVP/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > Andy Malone > @AndyMaloneMVP > Microsoft Defender | Cryptography | Powershell >></a></br>
+<a href="https://www.youtube.com/@thenewboston/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > Bucky Roberts > THENEWBOSTON > The New Boston | developer tutorials >></a></br>
+<a href="https://www.youtube.com/@davidbombal/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > David Bombal > Cyber/Python/DEV >></a></br>
+<a href="https://www.youtube.com/watch?v=AnwgxRtWXLI&list=PLhfrWIlLOoKMe1Ue0IdeULQvEgCgQ3a1B" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > David Bombal > Ethical Hacking >></a></br>
+<a href="https://www.youtube.com/@PracticalNetworking/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > Ed Harmoush > Ethical Hacking > PracticalNetworking >></a></br>
+<a href="https://www.youtube.com/@InsideCloudAndSecurity/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED >  CLOUD CYBERSECURITY > Pete Zerger > CISSP | CompTIA | ISC2 | ISACA > @InsideCloudAndSecurity >></a></br>
+<a href="https://www.wallarm.com/what" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > WALLARM LEARNING CENTER >></a></br>
+<a href="https://portswigger.net/web-security/learning-path" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > PORTSWIGGER LEARNING CENTER >></a></br>
+<a href="https://portswigger.net/web-security/all-labs" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > PORTSWIGGER ALL LABS >></a></br>
+<a href="https://www.youtube.com/@PortSwiggerTV/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > PORTSWIGGER > @PortSwiggerTV > Burpsuite >></a></br>
+<a href="https://www.youtube.com/@cyber.phantom/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > @cyber.phantom > Cyber Phantom >></a></br>
+<a href="https://www.corestack.io/azure-security-tools/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > azure-security-tools > corestack.io >></a></br>
+<a href="https://www.youtube.com/playlist?list=PL0W_QjMcqdSBsvn3VC0b07VxSUeum7HpB" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > web-security-academy > Michael Sommer >></a></br>
+<a href="https://www.linkedin.com/company/hackingarticles/posts/?feedView=documents" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > Linkedin > Hacking Articles > Documents + .PDFs >></a></br>
+<a href="https://www.hackingarticles.in/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > www.hackingarticles.in > Red Team + web penetration testing >></a></br>
+<a href="https://www.netacad.com/courses/ethical-hacker?courseLang=en-US" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > CISCO ETHICAL HACKER COURSE 70+ Hours > netacad.com >></a></br>
+<a href="https://www.youtube.com/playlist?list=PL8O9iwxpgTOLdCs-7dN3N5fiIc2X0NXOt" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > AWS > ALL SECURITY PROJECTS > @itsnextwork > </a></br>
+<a href="https://github.com/NickTheSecurityDude/my-arsenal-of-aws-security-tools" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > AWS >  my-arsenal-of-aws-security-tools > NickTheSecurityDude ></a></br>
+<a href="https://github.com/toniblyx/awssecurity/blob/master/arsenal.md" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > AWS > awssecurity > arsenal > toniblyx ></a></br>
+<a href="https://github.com/toniblyx/pentest-book" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > AWS > pentest-book > black hat repos ></a></br>
+<a href="https://github.com/testssl" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUD CYBERSECURITY > AWS > testssl.sh ></a></br></br>
+<a href="#plus" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'>+</a></span>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span></br>
+<hr color=orange>
+<a href="https://www.youtube.com/@RanaKhalil101/playlists" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > pentest-training > Rana Khalil >></a></br>
+<a href="https://azureops.org/blog/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > AZUREOPS ORG > ADF|SSIS|SQL|DEVOPS|AZ-204 >></a></br>
+<a href="https://dev.to/search?q=Azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > DEV.TO > CODE|ARTICLES|POCs|IMPLEMENTATIONS >></a></br>
+<a href="https://www.youtube.com/@TechMindFactory/videos" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > TECHMINDFACTORY > VIDEOS|IAM|B2C|AFD|techmindfactory.com >></a></br>
+<a href="https://petri.com/KB-Articles/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > PETRI > SEARCH AZURE KB ARTICLES >></a></br>
+<a href="https://www.cloudpartner.fi/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLOUDPARTNER.FI > ANYTHING MICROSOFT AND OTHER STUFF ON THE SIDE >></a></br>
+<a href="https://azurelessons.com/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > AZURELESSONS.COM > ANYTHING MICROSOFT > DETAILED >></a></br>
+<a href="https://copyprogramming.com/search?q=azure&btnSearch=Search" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > COPYPROGRAMMING.COM > ARTICLES | service_comparison >></a></br>
+<a href="https://www.scholarhat.com/tutorial/azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > scholarhat.com > TUTORIALS ></a></br>
+<a href="https://data-flair.training/blogs/microsoft-azure-tutorials-home/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > data-flair.training > TUTORIALS ></a></br>
+<a href="https://www.google.com/search?q=studyx.ai+az-104+renew" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > STUDYX.AI > ARTICLES >></a></br>
+<a href="https://www.google.com/search?q=classace.io+az-104+renew" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > CLASSACE.IO > ARTICLES >></a></br>
+<a href="https://www.google.com/search?q=studocu.com+az-104+renew" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > STUDOCU.COM > ARTICLES >></a></br>
+<a href="https://medium.com/search?q=azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > MEDIUM.com > ARTICLES >></a></br>
+<a href="https://kainos.com/search?q=azure" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > KAINOS.com > ARTICLES >></a></br>
+<a href="https://boraarat.com/microsoft-azure/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > BORAARAT.com > ARTICLES >></a></br>
+<a href="https://blog.syscloud.com/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > SYSCLOUD.com > BLOG > SECURITY >></a></br>
+<hr color=orange>
+<a href="https://www.geeksforgeeks.org/top-50-penetration-testing-interview-questions-and-answers/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > PENTEST JOB INTERVIEW > 50 QUESTIONS AND ANSWERS >></a></br>
+<a href="https://steflan-security.com/penetration-testing-interview-questions-cheat-sheet/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > PENETRATION TESTING JOB INTERVIEW > CHEAT SHEET QUESTIONS AND ANSWERS >></a></br>
+<a href="https://www.geeksforgeeks.org/top-50-ethical-hacking-interview-questions-and-answers/?ref=ml_lbp" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > ETHICAL HACKING JOB INTERVIEW > 50 QUESTIONS AND ANSWERS >></a></br>
+<a href="https://www.youtube.com/playlist?list=PLYmlEoSHldN7HJapyiQ8kFLUsk_a7EjCw" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > ETHICAL HACKING > KALI LINUX TUTORIAL > PENTEST > VAT >></a></br>
+<a href="https://cloud.hacktricks.xyz/pentesting-cloud/azure-security" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > ETHICAL HACKING > AZURE PENTESTING > HACKTRICS XYZ >></a></br>
+<a href="https://github.com/Kyuu-Ji/Awesome-Azure-Pentest" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > ETHICAL HACKING > AWESOME AZURE PENETRATION TESTING >></a></br>
+<a href="https://www.cobalt.io/blog/azure-ad-pentesting-fundamentals" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE RELATED > ETHICAL HACKING > AZURE AD PENTEST FUNDAMENTALS >></a></br>
+<hr color=orange>
+<a href="about: blankITTXT/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE LEARNING NOTES on \ITTXT > text-based > text-diagrams [&#128458;]</a></br>
+<a href="about: blankITTXT/azure_notes.txt" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE LEARNING NOTES ARCHITECTURE > text-based > text-diagrams [&#128458;]</a></br>
+<a href="about: blankITTXT/azure_notes_admin.txt" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE LEARNING NOTES ADMINISTRATOR > text-based > text-diagrams [&#128458;]</a></br>
+<a href="https://cloudacademy.com/library/azure/courses/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE LEARNING COURSES > CLOUDACADEMY > Accredited Microsoft Azure Expert Instructors </a></br>
+<a href="https://learn.microsoft.com/en-us/certifications/resources/az-104-sample-questions" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM MICROSOFT > [ RATIONALE ] > learn.microsoft.com > sample questions ></a></br>
+<a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWSOFn" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM MICROSOFT > [ PDFs ] > docs.microsoft.com > explained answers ></a></br>
+<a href="https://drive.google.com/drive/folders/1deV5Jx0fHUFzZjOR_cqSIJh4jqv9Nxnc" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM BRAINDUMPS > az-103 > .pdf > scenarios > practice ></a></br>
+<a href="https://drive.google.com/drive/folders/1UgWYSJj0uEU0eN4Uz8jnKDmXdqJJkSzZ" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM BRAINDUMPS > az-104 > .pdf > scenarios > practice ></a></br>
+<a href="https://www.infotechram.com/index.php/2022/10/09/az-104-certification-renewal-question-answers/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL STUDY > AZ-104 > infotechram.com > practice-mode > exam-mode > </a></br>
+<a href="https://www.infotechram.com/wp-content/uploads/2022/10/AZ-104-RENEWAL-EXAM-Q-A.pdf" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > infotechram.com > .pdf > renewal exam attempts > </a></br>
+<a href="https://www.alphaeducation.com/exam/AZ-104.pdf" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > alphaeducation.com > .pdf > renewal exam demo questions > </a></br>
+<a href="https://boraarat.com/renewal-for-microsoft-certified-azure-administrator-associate-to-2025/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > boraarat.com > 2025 AZ-104 renewal > renewal exam demo questions > </a></br>
+<a href="https://www.studocu.com/en-us/document/florida-technical-college-deland/computer-technology/az-104-renew/64508567" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > answers highlighted in yellow > STUDOCU # 1 > renewal exam demo questions > </a></br>
+<a href="https://www.studocu.com/en-us/document/hazard-community-technical-college/nursing-fundamentals/104-latest-nursing-exam/44427512" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > answers highlighted in yellow > STUDOCU # 2 > renewal exam demo questions > </a></br>
+<a href="https://www.google.com/search?hl=en&as_q=brainly.com+az-104+azure+administrator+questions+and+answers&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=lang_en&cr=&as_qdr=all&as_sitesearch=&as_occt=any&as_filetype=&tbs=" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > BRAINLY > google exam cases > </a></br>
+<a href="https://medium.com/@rajoliharikrishna72/azure-104-renewal-question-answer-with-explanation-dbf61a61fbe5" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > MEDIUM.com > harikrishna72 > Question & Answer with Explanation</a></br>
+<a href="https://medium.com/@mmkr.scm/az-104-renewal-exam-questions-bb66a568631b" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > MEDIUM.com > Manjari Reddy > Question & Answer with Explanation</a></br>
+<a href="https://adityagarg94.medium.com/azure-104-renewal-questions-with-explanation-d29f8e40727c" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > AZ-104 > MEDIUM.com > Aditya Garg > Question & Answer with Explanation</a></br>
+<a href="https://www.youtube.com/watch?v=nvtuAl4LPAU" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > video_dump1 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=Jt9vi6bWBLQ" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid2 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=lzVNMKzoSCg" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid3 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=sjfgmxJO4eQ" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid4 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=ABPMmMYriDA" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid5 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=Wr9I9n9qsPA" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid6 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=zgdypBQh_W8" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid7 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=A7_K9ND493I" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid8 ></a></br>
+<a href="https://www.youtube.com/watch?v=qW72HWCMHh0" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM RENEWAL > video_dump9 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=aAU_2TAa6DI" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid10 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=-1-j_b8sXrU" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid11 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=XfUL_uVaAkc" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid12 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=bXEzAvWFniY" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid13 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=RjeibAEq-Qo" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid14 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/playlist?list=PLGUZfyynke5540K-7tZNkgkYO1AEeWAEO" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vids_list ></a></br>
+<a href="https://www.youtube.com/watch?v=DXYBBtNjPDc" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > &nbsp; &#8603; vid15 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=mC3hninkowA" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid16 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=QCaTeCesP2Q" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid17 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=5hwfgSCJlCI" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid18 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=mjJrxWMMTJY" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid19 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=Hl997jmrtu0" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid20 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=WD4JelxCiCU" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid21 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=yniryBZCpls" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid22 </a><a class=p0> |</a>
+<a href="https://www.youtube.com/watch?v=A7_K9ND493I" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > vid23 </a><a class=p0> |</a></br>
+<a href="https://www.thedumpscentre.com/AZ-104-dumps/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM PDFs DUMPS > thedumpscenter.com > AZ-104 > complement with examtopics.com ></a></br>
+<a href="https://www.exam4training.com/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM 4 TRAINING > exam4training.com > courses > exam practice ></a></br>
+<a href="https://www.exam-answer.com/microsoft/az-104" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM ANSWERS > exam-answer.com > more cases > complement with examtopics.com ></a></br>
+<a href="https://www.passnexam.com/microsoft/az-104" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM PASSNEXAM COURSE > passnexam.com > explained answers > complement with examtopics.com ></a></br>
+<a href="https://www.whizlabs.com/blog/azure-administrator-az-104-exam-questions" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM QUESTIONS WHIZLAB amd EXPLANATIONS > AZ-104 > whizlabs.com > explained answers > complement with examtopics.com ></a></br>
+<a href="https://pupuweb.com/microsoft-azure-administrator-az104-actual-exam-question-answer-dumps-1/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM QUESTIONS > AZ-104 > Questions and Answers > pupuweb ></a></br>
+<a href="https://quizlet.com/528207476/az-104-flash-cards/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM FLASH CARDS > AZ-104 > flip > answers </a><a class=p0> |</a>
+<a href="https://quizlet.com/629946122/az-104-practice-set-7-101-150-flash-cards/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" > more_flash_cards </a></br>
+<a href="https://cloudtech.how/microsoft/az-104-question-1/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM STUDY > cloudtech.how > AZ-104 > questions & answers explained > complement with examtopics.com ></a></br>
+<a href="https://testpreptraining.com" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM TEST PREP TRAINING > testpreptraining.com > courses > practice-mode > exam-mode > videos > links > </a></br>
+<a href="https://www.examtopics.com/exams/microsoft/az-104/view/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM TOPICS > examtopics.com > collaboration > discussions > voted answers ></a></br>
+<a href="https://www.itexams.com/exam/AZ-104" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM ITEXAMS > itexams.com > [ expose correct answer ] > docs.microsoft.com > study links ></a></br>
+<a href="https://exam-files.com/microsoft/az-104" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE EXAM-FILES > .VCEX > [ AZ-104 ] > Q & A dumps ></a></br>
+<a href="https://www.freecram.net/exam/AZ-104-microsoft-azure-administrator-e11365.html" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE FREECRAM > .PDF .Q### > [ AZ-104 ] > Q & A dumps ></a></br>
+<a href="https://www.pragimtech.com/blog/azure/what-are-azure-data-centers/" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE QUICK REVIEW > wrap-up > simplified-diagrams > blog ></a></br>
+<a href="https://gowie.eu/index.php/azure/architecture" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE ARCHITECTURE REVIEW > design-cases > blog ></a></br>
+<a href="https://bettercoder.io/job-interview-questions/c/47/azure-cloud" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE JOB INTERVIEW 200 QUESTIONS AND ANSWERS > BetterCoder.io > other related IT technologies ></a></br>
+<a href="https://intellipaat.com/blog/interview-question/microsoft-azure-interview-questions/?US" rel="noopener noreferrer" target="_blank" class="p2" style="text-decoration:none" >> AZURE JOB INTERVIEW TOP 85 QUESTIONS AND ANSWERS > + Video ></a></br>
+</br>
+<a href="#plus" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'>+</a></span>
+<a href="#top" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:Courier'> ^^^ </a></span>
+</br>
+<hr color=orange>
+</br></br></br></br>
+
+
+
+</body>
+
+</Head>
+
+</html>
+

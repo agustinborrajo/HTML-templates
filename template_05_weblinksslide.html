@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="icon" href="">
+<Title>   
+Web Links
+</Title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Courier", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:    darkblue;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+
+
+.sidebar a {
+  padding: 1px 5px 2px 12px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.sidebar a:hover {
+  color: black;
+}
+
+
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 22px;
+  margin-left: 50px;
+}
+
+
+.openbtn {
+  border-radius: 6px;
+  font-family: courier;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  padding: 1px 15px;
+   border-width: 1px;
+  border-color: orange;
+  border-top-color:orange;
+  border-top-width: 1px;
+}
+
+
+.openbtn2 {
+  border-radius: 6px;
+  font-family: courier;
+  font-size: 18px;
+  cursor: pointer;
+  background-color:  lightgreen;
+  color: black;
+  padding: 1px 15px;
+  border: none;
+}
+
+
+.openbtn:hover {
+  background-color:   #ff661a;
+}
+
+.openbtn2:hover {
+  background-color:   #ff661a;
+}
+
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 1px 9px 6px 11px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 11px;}
+  .sidebar a {font-size: 17px;}
+}
+
+
+
+#main2 {
+  transition: margin-left .5s;
+
+  font-family: courier;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  padding: 3px 11px 3px 11px;
+  border: 2;
+  
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+</br>
+<img src="" align=left></br></br>
+ <hr color=black><hr color=orange>
+ 
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10062;</a>
+<a href="https://www.whatsmydns.net/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DNS ]</span>&#8594; GLOBAL DNS PROPAGATION CHECK</a>
+<a href="https://ping.eu/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ NET ]</span>&#8594; TCP IP TOOLS </a>
+<a href="https://www.whatsmyip.org/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ NET ]</span>&#8594; TCP IP TOOLS WHOIS DNS +info+</a>
+<a href="https://hackertarget.com/nmap-online-port-scanner/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ NET ]</span>&#8594; NMAP SCAN IP PORTS </a>
+<a href="https://www.ssllabs.com/ssltest/analyze.html" target="_blank" rel="noopener noreferrer"> <span style="background-color: #3d6bf5">[ SSL ]</span>&#8594; QUALYS SSL LABS </a>
+<a href="https://cryptcheck.fr/" target="_blank" rel="noopener noreferrer"> <span style="background-color: #3d6bf5">[ SSL ]</span>&#8594; SSL CRYPT CHECK </a>
+<a href="https://crt.sh/?a=1" target="_blank" rel="noopener noreferrer"> <span style="background-color: #3d6bf5">[ SSL ]</span>&#8594; SSL CERT ADVANCED QUERY</a>
+<a href="https://observatory.mozilla.org/" target="_blank" rel="noopener noreferrer"> <span style="background-color: #3d6bf5">[ SSL ]</span>&#8594; SSL OBSERVATORY MOZILLA </a>
+<a href="https://www.sslchecker.com" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ SSL ]</span>&#8594; SSL CERTIFICATE CHECKER </a>
+<a href="https://www.digicert.com/help/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ SSL ]</span>&#8594; SSL DIGICERT DIAGNOSTICS </a>
+<a href="https://webpagetest.org" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ WEB ]</span>&#8594; TEST WEB SITE</a>
+<a href="https://shodan.io/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ WEB ]</span>&#8594; TEST INTERNET-CONNECTED DEVICES</a>
+<a href="https://urlscan.io/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; URL AND WEB SCANNER</a>
+<a href="https://radar.cloudflare.com/scan" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; URL CLOUDFLARE RADAR SCANNER</a>
+<a href="https://security-code-scan.github.io" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; .NET STATIC CODE ANALYZER</a>
+<a href="https://scantrics.io/xss-scanner/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; TEST CROSS-SITE SCRIPTING VULN</a>
+<a href="https://clickjacker.io/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; TEST CLICKJACK VULN</a>
+<a href="https://securityheaders.com/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; TEST SECURITY HEADERS VULN</a>
+<a href="https://spyse.com/search?target=ip" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; CYBERSPACE URL SEARCH ENGINE</a>
+<a href="https://sitecheck.sucuri.net/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; WEBSITE SECURITY TEST</a>
+<a href="https://www.quttera.com" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; WEBSITE MALWARE TEST</a>
+<a href="https://www.immuniweb.com/websec" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; WEBSITE IMMUNITY TEST</a>
+<a href="https://sitechecker.pro/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ VAT ]</span>&#8594; WEBSITE SITE CHECKER PRO AUDIT</a>
+<a href="https://webtoolkitonline.com" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DEV ]</span>&#8594; ONLINE WEB TOOLKIT</a>
+<a href="https://toolbox.googleapps.com/apps/main" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DEV ]</span>&#8594; GOOGLE APPS TOOLBOX</a>
+<a href="https://jwt.io" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DEV ]</span>&#8594; JSON WEB TOKEN DECODER (io)</a>
+<a href="https://jwt.ms" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DEV ]</span>&#8594; JSON WEB TOKEN DECODER (ms)</a>
+<a href="https://developer.pingidentity.com/en/tools/saml-decoder.html" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DEV ]</span>&#8594; SAML AUTHN TOKEN DECODER</a>  
+<a href="https://oidcdebugger.com/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DEV ]</span>&#8594; OpenID AUTHN AUTHZ CONN DBUGGER</a>
+<a href="https://oauth.tools" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ DEV ]</span>&#8594; OAUTH 2.0 OPEN AUTHZ Tools</a>
+<a href="https://attack.mitre.org/mitigations/enterprise/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; MITRE ATTACK MITIGATIONS</a> 
+<a href="https://attack.mitre.org/versions/v9/" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; MITRE ATTACK VERSIONS</a>   
+<a href="https://www.cve.org" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; MITRE CVE ORG</a> 
+<a href="https://www.cvedetails.com" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; VULNERABILITY CVEDETAILS</a> 
+<a href="https://nvd.nist.gov/vuln/full-listing" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; VULNERABILITY LIST NIST NVD</a>   
+<a href="https://owasp.org/search" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; VULNERABILITY LIST OWASP</a> 
+<a href="https://www.rapid7.com/db" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; VULNERABILITY LIST RAPID7</a>   
+<a href="https://www.exploit-db.com" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; VULNERABILITY LIST EXPLOIT DB</a>   
+<a href="https://vuldb.com" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; VULNERABILITY LIST VULDB </a>   
+<a href="https://seclists.org" target="_blank" rel="noopener noreferrer" > <span style="background-color: #3d6bf5">[ CVE ]</span>&#8594; VULNERABILITY LIST SECLISTS </a>   
+
+</br></br></br></br>
+</div>
+
+
+
+
+
+
+
+
+<hr color=orange><hr color=black>
+
+
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()"> Web Testing Tools</button>  
+</div>
+
+
+<div id="main2">
+    
+<button class="openbtn2" onclick="openNav4()"> about: Blank &nbsp;&nbsp;&nbsp;&nbsp;</button></span>
+
+</div>
+
+
+
+<hr color=yellow><hr color=violet>
+
+
+
+
+</br></br></br>
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "450px";
+  document.getElementById("main").style.marginLeft = "450px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+
+
+<script>
+function openNav4() {
+window.open("about:blank", "_blank" , "noopener", "noreferrer")
+}
+
+function closeNav4() {
+
+}
+</script>
+
+
+   
+</body>
+</html> 

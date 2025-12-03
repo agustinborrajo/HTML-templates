@@ -1,0 +1,362 @@
+<!doctype html>
+<!--
+----------------------------------------------------------------------------------------------
+GNI: Getting Network Information ... * = values gathered by GNI
+----------------------------------------------------------------------------------------------
+Public IP ------ >  YOUR_PUBLIC_IP_ADDRESS  *
+----------------------------------------------------------------------------------------------
+Reverse DNS ---- >  your-reverse-DNS-entry  *
+----------------------------------------------------------------------------------------------
+Client DNS IP -- >  YOUR_CLIENT_DNS_IP_ADDRESS  *
+Client DNS geo - >  COUNTRY/REGION  *
+Autonomous Sys - >  AS####_number and Associated Provider Company  *
+----------------------------------------------------------------------------------------------
+Internet Service Provider =  ISP_PROVIDER  *
+Provider Company Name/Org =  ISP_company_name  *
+----------------------------------------------------------------------------------------------
+Your device is behind a Proxy =  true/false  *
+----------------------------------------------------------------------------------------------
+Your device is internet-online = true  *
+----------------------------------------------------------------------------------------------
+Date + Time =  YYYY-MM-DD  >  HH hs MM min SS sec  *
+----------------------------------------------------------------------------------------------
+Time Zone =  Country/City  *
+----------------------------------------------------------------------------------------------
+This /GNI page_load_duration =  %%% ms  *
+----------------------------------------------------------------------------------------------
+-->
+<html lang="en">
+<link rel="icon" href="">
+<Title>   
+GET NET INFO 
+</Title>
+<body>
+
+<meta name="viewport" content="device-width, initial-scale=.85">
+
+  <style> body { font-family: courier; font-size: 16px;} </style>
+<style>
+
+
+body {
+  font-family: "courier";
+  font-size: 16px;
+}
+
+a:link,
+span.MsoHyperlink {
+    color: blue;
+    text-deceoration: underline;
+}
+
+a:visited,
+MsoHyperlink {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover,
+span.MsoHyperlink {
+    color: red;
+    text-decoration: underline;
+}
+
+    </style>
+<p id="demo"></p>
+
+<script type="application/javascript">
+
+function sleep(milliseconds) {
+  const datex = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - datex < milliseconds);
+}
+
+  function getIP(json) {
+    document.write("</br></br></br>"); 
+    document.write(" ... loading GET-NET-INFO " );	
+    document.write("</br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . ");				
+    document.write("</br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . ");				
+    document.write("</br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . ");				
+    document.write("</br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . ");				
+    document.write("</br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . </br></br></br> . ");				
+    const string1 =  "https://ipapi.co/" + json.ip + "/json/"; 
+  
+  function makeHttpObject() {
+    try { return new XMLHttpRequest(); }
+    catch (error) { }
+    try { return new ActiveXObject("Msxml2.XMLHTTP"); }
+    catch (error) { }
+    try { return new ActiveXObject("Microsoft.XMLHTTP"); }
+    catch (error) { }
+
+    throw new Error("Could not create HTTP request object.");
+};
+
+var request = makeHttpObject();
+request.open("GET", string1, true);
+
+var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", string1, true );
+    xmlHttp.send();
+    sleep(5);
+    xmlHttp.responseText;
+	
+request.send();
+sleep(5);
+
+
+request.onreadystatechange = function() {
+    if (request.readyState == 4)
+	
+{
+              sleep(5);
+              line = "<span style='color:#64b5f6;'>------------------------------------------------------------------------</span>";
+                          document.write("<style> body { font-family: courier;} </style>");
+
+			  document.write(" &#128187;&#128293;&#128304;---&#128225;---&#128279;&#127760;<br/>"); 
+                          document.write(line);  
+			  document.write("<br/>"); 
+			  document.write("<span style='color:blue;'> GNI: Getting Network Information </style> ");
+                                                   
+                          document.write("<span style='color:red;'> ... </style><span style='color:green;'> ... </style>");
+                          document.write("<span style='color:lightgreen;'> ( response time: 5 seconds ) </style> ");	 	       
+	                  document.write("<span style='color:black;'></style> ");
+                          const string99 =  "http://edns.ip-api.com/json";
+
+function makeHttpObject94() {
+    try { return new XMLHttpRequest(); }
+    catch (error) { }
+    try { return new ActiveXObject("Msxml2.XMLHTTP"); }
+    catch (error) { }
+    try { return new ActiveXObject("Microsoft.XMLHTTP"); }
+    catch (error) { }
+
+    throw new Error("Could not create HTTP request object.");
+};
+var request94 = makeHttpObject94();
+request94.open("GET", string99, true);
+
+var xmlHttp94 = new XMLHttpRequest();
+    xmlHttp94.open( "GET", string99, true );
+    xmlHttp94.send();
+    sleep(5);
+    xmlHttp94.responseText;
+	
+request94.send();
+sleep(5);
+request94.onreadystatechange = function() {
+    if (request94.readyState == 4)
+	
+{   
+              sleep(5);
+	      var myArr94 = JSON.parse(request94.responseText);
+              document.innerHTML = myArr94;
+	      const userAgentDisplay = myArr94.userAgentDisplay;
+              myclientdnsip = myArr94.dns.ip;
+              myclientdnsgeo = myArr94.dns.geo;	               		  
+			  
+const string8 =  "http://ip-api.com/json/" + json.ip ;
+
+ function makeHttpObject3() {
+    try { return new XMLHttpRequest(); }
+    catch (error) { }
+    try { return new ActiveXObject("Msxml2.XMLHTTP"); }
+    catch (error) { }
+    try { return new ActiveXObject("Microsoft.XMLHTTP"); }
+    catch (error) { }
+
+    throw new Error("Could not create HTTP request object.");
+};
+var request3 = makeHttpObject3();
+request3.open("GET", string8, true);
+
+var xmlHttp3 = new XMLHttpRequest();
+    xmlHttp3.open( "GET", string8, true );
+    xmlHttp3.send();
+    sleep(5);
+    xmlHttp3.responseText;
+	
+request3.send();
+sleep(5);
+request3.onreadystatechange = function() {
+    if (request3.readyState == 4)
+	
+{   
+              sleep(5);
+	      var myArr2 = JSON.parse(request3.responseText);
+              document.innerHTML = myArr2;
+	      const isp = myArr2.isp;  
+	      myisp = myArr2.isp;
+              mycompany = myArr2.org;
+              myautonomsys = myArr2.as;   
+              myonlineornot = navigator.onLine;
+               
+
+
+
+	
+
+  const string11 =  "http://ip-api.com/json/" + json.ip + "?fields=status,message,isp,org,as,asname,reverse,mobile,proxy,hosting,timezone,query";
+
+
+
+  function makeHttpObject() {
+    try { return new XMLHttpRequest(); }
+    catch (error) { }
+    try { return new ActiveXObject("Msxml2.XMLHTTP"); }
+    catch (error) { }
+    try { return new ActiveXObject("Microsoft.XMLHTTP"); }
+    catch (error) { }
+
+    throw new Error("Could not create HTTP request object.");
+};
+
+
+var request = makeHttpObject();
+request.open("GET", string11, true);
+
+var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", string11, true );
+    xmlHttp.send();
+    sleep(5);
+    xmlHttp.responseText;
+	
+request.send();
+sleep(5);
+
+
+
+
+request.onreadystatechange = function() {
+    if (request.readyState == 4)
+	
+{
+              
+
+			  var myArr = JSON.parse(request.responseText);
+              document.innerHTML = myArr;
+			  mypublicip = myArr.query;
+			  document.write("<br/>");  
+			  document.write(line);
+			  document.write("<br/>");  
+			  reversedns = myArr.reverse;
+              document.write(" Public IP <span style='color:red;'> ------> </span>" + mypublicip + " &#9989; ");
+			  document.write("<br/>"); 
+			  document.write(line);
+			  document.write("<br/>");
+              document.write(" Reverse DNS ----> " + reversedns + " &#9989; ");
+			  document.write("<br/>"); 
+			  document.write(line); 
+			  document.write("<br/>");
+			  document.write("Client DNS IP --> " + myclientdnsip + " &#9989; ");		  
+   		      document.write("<br/>");
+			  document.write("Client DNS geo -> " + myclientdnsgeo );		  
+   		      document.write("<br/>"); 
+			  document.write("Autonomous Sys -> " + myautonomsys);
+			  document.write("<br/>");
+			  document.write(line); 
+			  document.write("<br/>");
+		      document.write("Internet Service Provider = " + myisp );
+			  document.write("<br/>");  
+			  document.write("Provider Company Name/Org = " + mycompany );
+			  document.write("<br/>");
+			  document.write(line);
+              document.write("<br/>");
+              sleep(5);
+              document.write("Your device is behind a Proxy = ", myArr.proxy);
+			  document.write("<br/>"); 
+			  document.write(line); 
+			  document.write("<br/>"); 
+    		  document.write("Your device is internet-online = " + myonlineornot );			  
+			  document.write("<br/>"); 
+			  document.write(line); 
+			  document.write("<br/>"); 
+
+
+
+              const date = new Date();
+              const milliseconds = date.getMilliseconds();
+              const hostnamefull = window.location.hostname
+              duration = performance.timing.responseEnd - performance.timing.navigationStart;
+
+const yyyy = date.getFullYear();
+const mm = date.getMonth()+1;
+const dd = date.getDate();
+const hh = date.getHours();
+const mi = date.getMinutes();
+const ss = date.getSeconds();
+
+document.write("Date + Time = ");
+document.write(yyyy);document.write("-");
+document.write(mm);document.write("-");
+document.write(dd);document.write(" &#9655; ");
+
+document.write(hh);document.write(" hs ");
+document.write(mi);document.write(" min ");
+document.write(ss);document.write(" sec ");
+
+document.write("<br/>");
+document.write(line);
+document.write("<br/>"); 		  
+document.write(" Time Zone = " ,myArr.timezone);
+document.write("<br/>"); 
+document.write(line);
+document.write("<br/>"); 
+              document.write("This /GNI page_load_duration = ");
+              document.write(duration);
+              document.write(" ms");
+	      document.write("<br/>"); 
+              document.write(line);                          
+	      document.write("<br/>");
+              document.write("<span style='color:red;'> DONE &#9989; </span>");
+
+}
+
+ }
+
+}
+}
+
+    
+        }
+		
+
+
+		
+};
+
+
+     }
+					  
+			  
+
+		
+};
+
+
+};
+ 
+ 
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script> 
+
+
+<div style="width: 800px; white-space: nowrap; align: left; overflow: hidden;">
+
+ 
+<Title>   
+GET NET INFO 
+</Title>
+   
+
+  </body>
+
+<Title>   
+GET NET INFO 
+</Title>
+
+</html>

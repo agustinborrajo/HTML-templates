@@ -1,0 +1,338 @@
+<!doctype html>
+<!--
+--------------------------------------------------------------------------------------------------
+TEST IP:Port/CONN # Tests connectivity against IP or Hostname on a given PORT using the Browser
+--------------------------------------------------------------------------------------------------
+Enter IP|hostname|site/page/file and port.
+Scheme/Protocol is inferred automatically (Auto). Test might take 5+ seconds.
+IP or Hostname >> google.com # example
+Port >> 443 # example
+[[ Test Conn ]] # Iframe probe is skipped for WS/WSS and blocked for mixed-content
+--------------------------------------------------------------------------------------------------
+Fetch HTTP probe # Open or accepted HTTP connection
+--------------------------------------------------------------------------------------------------
+WebSocket probe # No WebSocket response
+--------------------------------------------------------------------------------------------------
+Image tag probe # Image loaded - port accepted HTTP
+--------------------------------------------------------------------------------------------------
+Script tag probe # Script failed to load
+--------------------------------------------------------------------------------------------------
+Iframe/browser-load probe # No iframe load event (timeout)
+--------------------------------------------------------------------------------------------------
+Likely reachable: at least one probe completed successfully. Interpret with care.
+Best-effort attempt; does not open raw TCP sockets
+--------------------------------------------------------------------------------------------------
+REPO: https://github.com/agustinborrajo/GNIgetnetworkinfo-TestIPportConnection-IPcalculator
+--------------------------------------------------------------------------------------------------
+FILENAME = test-IP-hostname-port-connectivity.html
+--------------------------------------------------------------------------------------------------
+HOSTING = http://agustin.50megs.com/IPtestconn/
+--------------------------------------------------------------------------------------------------
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="http://agustin.50megs.com/agustinicon.png">
+  <title>TEST IP:Port/CONN</title>
+  <style>
+    :root{
+      --bg:#071026; --card:#071428; --accent:#4f9bf7; --muted:#9fb0c9;
+      --good:#10b981; --bad:#ef4444; --glass: rgba(255,255,255,0.02);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; min-height:100vh; display:left; align-items:center; justify-content:center; background:
+      radial-gradient(1200px 400px at 10% 10%, rgba(79,155,247,0.06), transparent), var(--bg); color:#e6eef8}
+    .card{width:740px; max-width:96%; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04); padding:20px; border-radius:12px; box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    h1{margin:0 0 6px 0; font-size:18px}
+    .row{display:flex; gap:12px; margin-top:12px; align-items:center}
+    label{font-size:12px; color:var(--muted); display:block; margin-bottom:6px}
+    input[type=text], input[type=number]{
+      width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.04);
+      background:var(--glass); color:inherit; font-size:14px;
+    }
+    .col{flex:1}
+    button{
+      background:linear-gradient(90deg,var(--accent),#3b82f6); color:#062033; border:none; padding:10px 14px;
+      border-radius:10px; font-weight:600; cursor:pointer; box-shadow:0 6px 18px rgba(59,130,246,0.18)
+    }
+    .results{margin-top:14px; padding:12px; border-radius:10px; background:rgba(255,255,255,0.02); font-size:13px}
+    .line{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 0; border-bottom:1px dashed rgba(255,255,255,0.02)}
+    .line:last-child{border-bottom:0}
+    .status{font-weight:700}
+    .status.ok{color:var(--good)}
+    .status.fail{color:var(--bad)}
+    .note{font-size:12px; color:var(--muted); margin-top:10px}
+    .small{font-size:12px; color:var(--muted)}
+    .spinner{width:14px;height:14px;border:2px solid rgba(255,255,255,0.06);border-top-color:var(--accent);border-radius:50%;animation:spin .9s linear infinite;margin-left:8px}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    /* hidden iframe styles */
+    #probeFrame{width:1px;height:1px;position:absolute;left:-9999px;top:-9999px;visibility:hidden;border:0}
+    .warning{color:var(--bad);font-weight:600;margin-left:8px}
+  </style>
+</head>
+<body>
+<hr color=orange></br></br></br></br>
+  <div class="card" role="main" aria-labelledby="title">
+    <h1 id="title">TEST IP:Port/CONN</h1>
+    <div class="small">Enter IP|hostname|site/page/file and port. Scheme/Protocol is inferred automatically (Auto). Test might take 5+ seconds.</div>
+
+    <div class="row" style="margin-top:14px">
+      <div class="col">
+        <label for="host">IP or Hostname</label>
+        <input id="host" type="text" placeholder="e.g., 192.168.1.10 or example.com" value="127.0.0.1" />
+      </div>
+      <div style="width:120px">
+        <label for="port">Port</label>
+        <input id="port" type="number" min="1" max="65535" placeholder="80" value="80" />
+      </div>
+      <div style="width:1px; height:1px; overflow:hidden; position:relative; left:-9999px;">
+        <!-- Hidden scheme input; default 'auto'. Edit here or via localStorage to force a different scheme. -->
+        <input id="hiddenScheme" type="text" value="auto" aria-hidden="true" />
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:12px; align-items:center">
+      <button id="testBtn">Test Conn</button>
+      <div id="quick" class="small" style="margin-left:auto">Iframe probe is skipped for WS/WSS and blocked for mixed-content</div>
+    </div>
+
+    <div id="mixedWarning" class="row" style="margin-top:10px;display:none">
+      <div class="warning">Mixed-content warning: this page is secure (HTTPS). Loading HTTP targets may be blocked by the browser.</div>
+    </div>
+
+    <div class="results" id="results" aria-live="polite" role="status" style="display:none">
+      <div class="line"><div>Fetch HTTP probe</div><div id="resFetch" class="status">-</div></div>
+      <div class="line"><div>WebSocket probe</div><div id="resWs" class="status">-</div></div>
+      <div class="line"><div>Image tag probe</div><div id="resImg" class="status">-</div></div>
+      <div class="line"><div>Script tag probe</div><div id="resScript" class="status">-</div></div>
+      <div class="line"><div>Iframe/browser-load probe</div><div id="resFrame" class="status">-</div></div>
+      <div class="note" id="note">Note: browser limitations, mixed-content rules, and cross-origin restrictions apply.</div>
+    </div>
+    <footer class="small" style="margin-top:10px">Best-effort attempt; does not open raw TCP sockets</footer>
+  </div>
+
+  <!-- hidden iframe used for browser-load probe -->
+  <iframe id="probeFrame" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+
+  <script>
+    const hostEl = document.getElementById('host');
+    const portEl = document.getElementById('port');
+    const hiddenSchemeEl = document.getElementById('hiddenScheme');
+    const btn = document.getElementById('testBtn');
+    const results = document.getElementById('results');
+    const resFetch = document.getElementById('resFetch');
+    const resWs = document.getElementById('resWs');
+    const resImg = document.getElementById('resImg');
+    const resScript = document.getElementById('resScript');
+    const resFrame = document.getElementById('resFrame');
+    const note = document.getElementById('note');
+    const probeFrame = document.getElementById('probeFrame');
+    const mixedWarning = document.getElementById('mixedWarning');
+
+    const LS_KEY = 'port_test_last_scheme';
+    // load persisted scheme if available (hidden, still usable)
+    try {
+      const last = localStorage.getItem(LS_KEY);
+      if (last) hiddenSchemeEl.value = last;
+    } catch(e){}
+
+    function resolveScheme(chosen, portNum) {
+      if (chosen === 'http' || chosen === 'https' || chosen === 'ws' || chosen === 'wss') return chosen;
+      // auto:
+      if (portNum === 443) return 'https';
+      if (portNum === 80) return 'http';
+      return (location.protocol === 'https:') ? 'https' : 'http';
+    }
+
+    function updateMixedWarning(scheme, port) {
+      if (location.protocol === 'https:' && scheme === 'http') {
+        mixedWarning.style.display = 'flex';
+      } else {
+        mixedWarning.style.display = 'none';
+      }
+    }
+
+    function showStatus(el, state, msg){
+      el.className = 'status ' + (state === 'ok' ? 'ok' : state === 'fail' ? 'fail' : '');
+      el.textContent = msg;
+    }
+
+    function makeSpinnerIn(el){
+      el.innerHTML = '';
+      const s = document.createElement('span');
+      s.className='spinner';
+      el.appendChild(s);
+    }
+
+    function clearAll(){
+      showStatus(resFetch,'','-');
+      showStatus(resWs,'','-');
+      showStatus(resImg,'','-');
+      showStatus(resScript,'','-');
+      showStatus(resFrame,'','-');
+      results.style.display='none';
+      note.textContent = 'Note: browser limitations, mixed-content rules, and cross-origin restrictions apply.';
+      updateMixedWarning(resolveScheme(hiddenSchemeEl.value, Number(portEl.value) || 0), Number(portEl.value));
+    }
+
+    // probes
+    function probeFetch(host, port, scheme, timeoutMs = 4000){
+      if (!scheme.startsWith('http')) return Promise.resolve({skipped:true, reason:'scheme-not-http'});
+      const url = `${scheme}://${host}:${port}/`;
+      return new Promise(resolve=>{
+        const controller = new AbortController();
+        const timer = setTimeout(()=>{ controller.abort(); resolve({success:false, reason:'timeout'}); }, timeoutMs);
+        fetch(url, {method:'HEAD', mode:'no-cors', cache:'no-cache', signal:controller.signal})
+          .then(r=>{ clearTimeout(timer); resolve({success:true, reason:'fetch-resolved', status:r.status||0}); })
+          .catch(err=>{ clearTimeout(timer); resolve({success:false, reason: err && err.name === 'AbortError' ? 'timeout' : 'error'}); });
+      });
+    }
+
+    function probeWebSocket(host, port, scheme, timeoutMs = 4000){
+      let proto;
+      if (scheme === 'ws' || scheme === 'wss') proto = scheme;
+      else proto = (location.protocol === 'https:' ? 'wss' : 'ws');
+      const url = `${proto}://${host}:${port}/`;
+      return new Promise(resolve=>{
+        let ws;
+        try { ws = new WebSocket(url); } catch(e){ resolve({success:false, reason:'ws-constructor-failed'}); return; }
+        let done=false;
+        const timer = setTimeout(()=>{ if(!done){ done=true; try{ ws.close(); }catch{}; resolve({success:false, reason:'timeout'}); } }, timeoutMs);
+        ws.onopen = ()=>{ if(!done){ done=true; clearTimeout(timer); try{ ws.close(); }catch{}; resolve({success:true, reason:'open'}); } };
+        ws.onerror = ()=>{ if(!done){ done=true; clearTimeout(timer); try{ ws.close(); }catch{}; resolve({success:false, reason:'error'}); } };
+      });
+    }
+
+    function probeImage(host, port, scheme, timeoutMs = 4000){
+      if (!scheme.startsWith('http')) return Promise.resolve({skipped:true, reason:'scheme-not-http'});
+      const url = `${scheme}://${host}:${port}/favicon.ico`;
+      const img = new Image();
+      return new Promise(resolve=>{
+        let done=false;
+        const timer = setTimeout(()=>{ if(!done){ done=true; img.src=''; resolve({success:false, reason:'timeout'}); } }, timeoutMs);
+        img.onload = ()=>{ if(!done){ done=true; clearTimeout(timer); resolve({success:true, reason:'onload'}); } };
+        img.onerror = ()=>{ if(!done){ done=true; clearTimeout(timer); resolve({success:false, reason:'onerror'}); } };
+        img.src = url + '?_cb=' + Date.now();
+      });
+    }
+
+    function probeScript(host, port, scheme, timeoutMs = 4000){
+      if (!scheme.startsWith('http')) return Promise.resolve({skipped:true, reason:'scheme-not-http'});
+      const url = `${scheme}://${host}:${port}/`;
+      return new Promise(resolve=>{
+        const s = document.createElement('script');
+        let done=false;
+        const timer = setTimeout(()=>{ if(!done){ done=true; s.onerror=null; s.onload=null; s.remove(); resolve({success:false, reason:'timeout'}); } }, timeoutMs);
+        s.onload = ()=>{ if(!done){ done=true; clearTimeout(timer); s.remove(); resolve({success:true, reason:'onload'}); } };
+        s.onerror = ()=>{ if(!done){ done=true; clearTimeout(timer); s.remove(); resolve({success:false, reason:'onerror'}); } };
+        s.src = url + '?_cb=' + Date.now();
+        document.head.appendChild(s);
+      });
+    }
+
+    function probeIframe(host, port, scheme, timeoutMs = 5000){
+      if (!scheme.startsWith('http')) return Promise.resolve({skipped:true, reason:'scheme-not-http'});
+      if (location.protocol === 'https:' && scheme === 'http') {
+        return Promise.resolve({success:false, reason:'mixed-content-blocked', detail:'Browser likely blocks HTTP iframe from HTTPS page'});
+      }
+      return new Promise(resolve=>{
+        const url = `${scheme}://${host}:${port}/`;
+        let done=false;
+        function finish(obj){
+          if(done) return;
+          done=true;
+          try { probeFrame.removeEventListener('load', onload); probeFrame.removeEventListener('error', onerror); } catch(e){}
+          probeFrame.removeAttribute('src');
+          resolve(obj);
+        }
+        const onload = () => { finish({success:true, reason:'load'}); };
+        const onerror = () => { finish({success:false, reason:'error'}); };
+        probeFrame.addEventListener('load', onload);
+        probeFrame.addEventListener('error', onerror);
+        const timer = setTimeout(()=>{ finish({success:false, reason:'timeout'}); }, timeoutMs);
+        try { probeFrame.src = url; } catch(e){ clearTimeout(timer); finish({success:false, reason:'exception', detail:e.message}); }
+      });
+    }
+
+    // runner
+    btn.addEventListener('click', async ()=>{
+      const host = hostEl.value.trim();
+      const port = Number(portEl.value);
+      if(!host || !port || port<1 || port>65535){ alert('Provide valid IP/hostname and port'); return; }
+
+      // scheme: use hidden input (default auto) but persist last-used scheme to storage if changed externally
+      let chosen = hiddenSchemeEl.value || 'auto';
+      try {
+        // if user previously set a scheme in console via localStorage, prefer that
+        const persisted = localStorage.getItem(LS_KEY);
+        if (persisted) { chosen = persisted; hiddenSchemeEl.value = persisted; }
+      } catch(e){}
+
+      clearAll();
+      results.style.display='block';
+      makeSpinnerIn(resFetch); makeSpinnerIn(resWs); makeSpinnerIn(resImg); makeSpinnerIn(resScript); makeSpinnerIn(resFrame);
+      note.textContent = 'Probing using multiple browser-friendly methods...';
+
+      const scheme = resolveScheme(chosen, port);
+      updateMixedWarning(scheme, port);
+
+      if (!scheme.startsWith('http')) {
+        showStatus(resFrame,'','Skipped for non-HTTP scheme');
+      }
+
+      const maxTimeout = 6000;
+      const tasks = [
+        probeFetch(host, port, scheme, maxTimeout),
+        probeWebSocket(host, port, scheme, maxTimeout),
+        probeImage(host, port, scheme, maxTimeout),
+        probeScript(host, port, scheme, maxTimeout),
+        probeIframe(host, port, scheme, maxTimeout)
+      ];
+
+      const [rFetch, rWs, rImg, rScript, rFrame] = await Promise.all(tasks);
+
+      if(rFetch.skipped) showStatus(resFetch,'','Skipped for scheme');
+      else if(rFetch.success) showStatus(resFetch,'ok','Open or accepted HTTP connection');
+      else showStatus(resFetch,'fail','No HTTP response');
+
+      if(rWs.success) showStatus(resWs,'ok','WebSocket accepted connection');
+      else showStatus(resWs,'fail','No WebSocket response');
+
+      if(rImg.skipped) showStatus(resImg,'','Skipped for scheme');
+      else if(rImg.success) showStatus(resImg,'ok','Image loaded - port accepted HTTP');
+      else showStatus(resImg,'fail','Image failed to load');
+
+      if(rScript.skipped) showStatus(resScript,'','Skipped for scheme');
+      else if(rScript.success) showStatus(resScript,'ok','Script loaded - port accepted HTTP');
+      else showStatus(resScript,'fail','Script failed to load');
+
+      if(rFrame.skipped) {
+        showStatus(resFrame,'','Iframe skipped for non-HTTP scheme');
+      } else if(rFrame.success) {
+        showStatus(resFrame,'ok','Page loaded in iframe (address-bar likely would load)');
+      } else {
+        if(rFrame.reason === 'mixed-content-blocked') showStatus(resFrame,'fail','Blocked by mixed-content (HTTPS page -> HTTP target)');
+        else if(rFrame.reason === 'timeout') showStatus(resFrame,'fail','No iframe load event (timeout)');
+        else if(rFrame.reason === 'error') showStatus(resFrame,'fail','Iframe error on load');
+        else showStatus(resFrame,'fail','Iframe probe failed');
+      }
+
+      const anyOpen = (rFetch.success || rWs.success || rImg.success || rScript.success || rFrame.success);
+      if(anyOpen){
+        note.textContent = 'Likely reachable: at least one probe completed successfully. Interpret with care.';
+      } else {
+        note.textContent = 'No probes succeeded. Could be closed/filtered, protocol mismatch, or browser-level blocking.';
+      }
+    });
+
+    // Enter to submit
+    [hostEl, portEl].forEach(el=>el.addEventListener('keydown', e=>{ if(e.key === 'Enter') btn.click(); }));
+
+    // initial state
+    updateMixedWarning(resolveScheme(hiddenSchemeEl.value, Number(portEl.value) || 0), Number(portEl.value));
+  </script>
+</body>
+</html>

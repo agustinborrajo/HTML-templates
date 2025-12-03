@@ -1,0 +1,119 @@
+<!Doctype Html>
+<Html>   
+<Head>    
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAHXSURBVFhH7ZexSsNQFIZPhCoonRz6Am3AKAotVMRJcLV2cexQSkG7+wDOOkoXEQefwL6ADhaxQ8HBDqGbDjq4VBC0aD3n3NvWNunNvYKmQz84N3+aQP7c+58ktQCggxUabCCTDsdDpWbBlNShMTADh7UIb/+a/XSbt2MxAxMDxgbsaBnsTtu/ZgvyLH2MDPDJGxnWHl6wVlJCG2Bk4IuGywprD/NYxRHmFBgZoJ6FT5b+ODEp9NE2QBdPbF0BbCruchUzYpgDIwNgxQEuFHf5ixxoG2jRQBf/wO017fgQxUo6QmuibSCJ7cdMY+2cCD0MHcutC62JlgE+qdt+twD1p5LQfmAOTNAy8E5DVk7/eRVmaP+MBh8wB/aanC0NtAwsAiY7j+IVq97gmYajKo1eDHMQaIDT7+RY08PGvSmJT6iHBv/kwTAHegbi2H6S7nMfWkX5iw8GOQg00Gs/Q3QfSIEGeu1HzO2Ca0W4mliw/SwPDEFhzctlC0BpgA/+ePu5b6dSyU/pZpO1B8pBqr9sKkYasK0CxPceB6bfvuu/87k1VeRjYCeC23H0DCzgFJaH1n4Z6/iA5RItzX1A2l1FUCUU8slXcaiEbmAgA//N+Pw3FDIMAL4Bi9hvdgpvIIIAAAAASUVORK5CYII=">
+<Title>&#128526;&#128190;</Title>
+<a name="top"></a>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+body {
+  font-family: "courier", sans-serif;
+}
+input[type=text] {
+  font-family: "consolas", sans-serif;
+  font-size: 10;
+  width: 88%;
+  padding: 3px 3px;
+  margin: 2px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color:   #ffff4d;
+  color: black;
+}
+</style>
+</Head>
+<Body style="background-color:  white; font-size: 12px; font-family: courier">
+
+<hr color=orange><hr color=blue>
+
+<textarea rows="20" cols="226" style="font-family:Consolas; font-size: 12; color:yellow; background-color: black;"></textarea><br>
+<textarea rows="12" cols="226" style="font-family:Consolas; font-size: 12; color:#02fa1b; background-color: black;"></textarea><br>
+<textarea rows="12" cols="226" style="font-family:Consolas; font-size: 12; color:red; background-color: black;"></textarea><br>
+<textarea rows="12" cols="226" style="font-family:Consolas; font-size: 12; color:white; background-color: #040130"></textarea><br>
+<textarea rows="12" cols="226" style="font-family:Consolas; font-size: 12; color:black; background-color: #fcd2e7"></textarea><br>
+<textarea rows="12" cols="226" style="font-family:Consolas; font-size: 12; color:black; background-color: #fceed2"></textarea><br>
+<textarea rows="12" cols="226" style="font-family:Consolas; font-size: 12; color:black; background-color: #d2fcdd"></textarea><br>
+
+<!-- Cloned view comparison textareas added here -->
+
+  <textarea id="leftCompare" rows="15" cols="116" style="font-family: Consolas; font-size: 12px; color: red; background-color:white; border: 1px solid #888;"></textarea><textarea id="rightCompare" rows="15" cols="116" style="font-family: Consolas; font-size: 12px; color: blue; background-color:white; border: 1px solid #888;"></textarea><br>
+
+<INPUT TYPE="text" SIZE="228" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+<INPUT TYPE="text" SIZE="226" style="font-family:Consolas;"><br>
+
+<!-- SAVE ALL TEXT BUTTON -->
+<button class="button1" onclick="saveAllText()">&#128190;</button>
+<br><br><br><br><br><br>
+
+<script>
+function saveAllText() {
+    // Collect all textareas and inputs except Save All button
+    let textareas = [...document.querySelectorAll("textarea")];
+    let inputs = [...document.querySelectorAll("input[type=text]")];
+
+    // Include all textarea and input values including new compare views
+    let contents = [];
+
+    // Add textareas (order-preserved)
+    textareas.forEach(ta => {
+      contents.push(ta.value.trim());
+    });
+
+    // Add inputs
+    inputs.forEach(input => {
+      contents.push(input.value.trim());
+    });
+
+    // Join all contents with \r\n and separator with blank lines before and after
+    let contentToSave = contents.join("\r\n\r\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \r\n\r\n");
+
+    // Generate filename with timestamp
+    let now = new Date();
+    let filename = "saved_text_" +
+        now.getFullYear() + "-" +
+        String(now.getMonth()+1).padStart(2,'0') + "-" +
+        String(now.getDate()).padStart(2,'0') + "-" +
+        String(now.getHours()).padStart(2,'0') + "-" +
+        String(now.getMinutes()).padStart(2,'0') + "-" +
+        String(now.getSeconds()).padStart(2,'0') +
+        ".txt";
+
+    // Create file blob and trigger download
+    let blob = new Blob([contentToSave], { type: "text/plain" });
+    let anchor = document.createElement("a");
+    anchor.download = filename;
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.click();
+    window.URL.revokeObjectURL(anchor.href);
+}
+</script>
+
+<style>
+.button1 {
+  background-color: orange;
+  color: black;
+  border: 2px solid #04AA6E;
+  padding: 8px 16px;
+  font-family: consolas;
+  font-size: 14px;
+  cursor: pointer;
+}
+.button1:hover {
+  background-color: blue;
+  color: white;
+  border: 2px solid #04AA6E;
+}
+</style>
+
+</Body> 
+</Html>

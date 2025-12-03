@@ -1,0 +1,183 @@
+<!Doctype Html>
+<Html>   
+<Head>    
+
+
+<link rel="icon" href="">
+
+<Title>   
+In-Browser Quick Text Editor
+</Title>
+
+<meta name="viewport" content="width=device-width, initial-scale=.6">
+<Body style="background-color:  white; font-size: 18px; font-family: courier">
+
+<style> 
+
+
+
+body {
+  font-family: "consolas", sans-serif;
+}
+
+input[type=text] {
+  font-family: "consolas", sans-serif;
+  font-size: 12;
+  width: 88%;
+  padding: 3px 3px;
+  margin: 2px 0;
+  
+  box-sizing: border-box;
+  border: none;
+  background-color:   #ffff4d;
+  color: black;
+}
+</style>
+
+</Head>
+<Body>
+
+<table style="width:1920px">
+
+  </table>
+  
+<style>
+
+.button {
+  font-family: consolas;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding: 1px;
+  width: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.button span {
+  font-family: consolas;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  font-family: consolas;
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  font-family: consolas;
+  padding-right: 10px;
+}
+
+.button:hover span:after {
+  font-family: consolas;
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<a name="editor"></a>
+
+<hr color=cyan>
+<hr color=yellow><hr color=pink>
+<form>
+<textarea id="txtarea" style="font-family:Consolas; font-size: 14; color:black; background-color: pink;" rows="24" cols="228" id="text"placeholder="| PLAIN TEXT | IN-BROWSER NOTEPAD |type|edit|copy|paste|SAVE|"></textarea>
+</br>
+<textarea id="txtarea" style="font-family:Consolas; font-size: 14; color:red; background-color: #fcf6e1;" rows="6" cols="228" id="text"placeholder="| PLAIN TEXT | IN-BROWSER NOTEPAD |type|edit|copy|paste|swap|"></textarea></br>
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 1 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 2 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 3 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 4 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 5 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 6 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 7 |copy|paste|compare|">
+<INPUT TYPE="text" style="font-family:Consolas; font-size: 14;color:blue; background-color: #dcfcf9;" SIZE="200" placeholder="| STRING 8 |copy|paste|compare|">
+</br><hr color=orange>
+<button type="button" onclick="download()">  &#128190; </button>---<a href="data:text/html,<html contenteditable style='font-family:Consolas'>type_TXT_paste_TXT_HTML_PICS_CTRL+S_save_as_.mhtml" target="_blank" style="background-color:blue;" >&#127751;</a>
+
+<a href="" rel="noopener noreferrer" class="button" style="vertical-align:middle" style='font-family:"Courier New"' > < </a></span>
+<script>
+function download(){
+  // Collect all textarea and text input elements in DOM order
+  const elements = [...document.querySelectorAll("textarea, input[type=text]")];
+
+  // Extract values without altering characters
+  const contents = elements.map(el => el.value);
+
+  // Join with a single carriage return between items
+  const contentToSave = contents.join("\r");
+
+  // Generate filename with timestamp
+  const now = new Date();
+  const filename = "saved_text_" +
+    now.getFullYear() + "-" +
+    String(now.getMonth() + 1).padStart(2, '0') + "-" +
+    String(now.getDate()).padStart(2, '0') + "-" +
+    String(now.getHours()).padStart(2, '0') + "-" +
+    String(now.getMinutes()).padStart(2, '0') + "-" +
+    String(now.getSeconds()).padStart(2, '0') +
+    ".txt";
+
+  // Create file blob and trigger download
+  const blob = new Blob([contentToSave], { type: "text/plain" });
+  const anchor = document.createElement("a");
+  anchor.download = filename;
+  anchor.href = window.URL.createObjectURL(blob);
+  anchor.click();
+  window.URL.revokeObjectURL(anchor.href);
+}
+</script>
+
+
+
+</form>
+</Body> 
+</Html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

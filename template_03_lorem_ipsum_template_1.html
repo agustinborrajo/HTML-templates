@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<!--Unix LF UTF-8 *-BOM -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="">
+    <title>Lorem Ipsum Template | ABCDEFG123 </title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #242424;
+            background-color: #ffffff;
+        }
+
+        .header {
+            background-color: #0078d4;
+            color: white;
+            padding: 12px 0;
+            border-bottom: 1px solid #005a9e;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo { font-size: 18px; font-weight: 600; margin-right: 24px; }
+
+        .breadcrumb {
+            background-color: #f3f2f1;
+            padding: 12px 0;
+            border-bottom: 1px solid #e1dfdd;
+        }
+
+        .breadcrumb-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            font-size: 14px;
+            color: #605e5c;
+        }
+
+        .breadcrumb a { color: #0078d4; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 32px 24px; }
+        .main-content { max-width: 100%; }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #605e5c;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #323130;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e1dfdd;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #323130;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #323130;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p { margin-bottom: 16px; color: #323130; }
+
+        ul, ol { margin-bottom: 16px; padding-left: 32px; }
+        li { margin-bottom: 8px; color: #323130; }
+
+        strong { font-weight: 600; color: #323130; }
+        em { font-style: italic; }
+
+        .note, .tip, .warning, .important {
+            padding: 16px; margin: 24px 0; border-left: 4px solid; background-color: #f3f2f1;
+        }
+
+        .note { border-left-color: #0078d4; }
+        .tip { border-left-color: #107c10; }
+        .warning { border-left-color: #ffb900; }
+        .important { border-left-color: #e81123; }
+
+        table {
+            width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px;
+        }
+
+        th {
+            background-color: #f3f2f1; color: #323130; font-weight: 600;
+            text-align: left; padding: 12px; border: 1px solid #e1dfdd;
+        }
+
+        td { padding: 12px; border: 1px solid #e1dfdd; vertical-align: top; }
+        tr:nth-child(even) { background-color: #faf9f8; }
+
+        code {
+            background-color: #f3f2f1; padding: 2px 6px; border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px; color: #e81123;
+        }
+
+        pre {
+            background-color: #f3f2f1; padding: 16px; border-radius: 4px; overflow-x: auto;
+            margin: 24px 0; border: 1px solid #e1dfdd;
+        }
+
+        pre code { background-color: transparent; padding: 0; color: #323130; }
+
+        hr { border: none; border-top: 1px solid #e1dfdd; margin: 32px 0; }
+
+        .metadata {
+            display: flex; gap: 24px; margin-bottom: 24px; padding-bottom: 16px;
+            border-bottom: 1px solid #e1dfdd; font-size: 14px; color: #605e5c;
+        }
+
+        .metadata-item { display: flex; align-items: center; gap: 6px; }
+
+        .checklist { background-color: #f3f2f1; padding: 24px; border-radius: 4px; margin: 24px 0; }
+        .checklist h2 { margin-top: 0; border-bottom: none; }
+
+        .scenario {
+            background-color: #faf9f8; padding: 20px; border-radius: 4px; margin: 24px 0;
+            border-left: 4px solid #0078d4;
+        }
+
+        .scenario h3 { margin-top: 0; color: #0078d4; }
+
+        .tool {
+            margin: 32px 0; padding: 24px; background-color: #faf9f8; border-radius: 4px;
+            border-left: 4px solid #107c10;
+        }
+
+        .tool-number {
+            display: inline-block; background-color: #107c10; color: white; padding: 4px 12px;
+            border-radius: 4px; font-weight: 600; font-size: 14px; margin-bottom: 12px;
+        }
+
+        .red-flags {
+            background-color: #fff4ce; padding: 16px; border-left: 4px solid #ffb900; margin-top: 16px;
+        }
+
+        .section-divider {
+            text-align: center; font-size: 24px; margin: 64px 0; padding: 24px 0;
+            border-top: 2px solid #e1dfdd; border-bottom: 2px solid #e1dfdd; background-color: #f3f2f1;
+        }
+
+        .footer {
+            background-color: #f3f2f1; padding: 32px 0; margin-top: 64px; border-top: 1px solid #e1dfdd;
+        }
+
+        .footer-content {
+            max-width: 1400px; margin: 0 auto; padding: 0 24px; text-align: center;
+            color: #605e5c; font-size: 14px;
+        }
+
+        .usage-box {
+            background-color: #e8f4fd; padding: 24px; border-radius: 4px; margin: 24px 0;
+            border-left: 4px solid #0078d4;
+        }
+
+        .wisdom {
+            background-color: #f0f9ff; padding: 24px; border-radius: 4px; margin: 24px 0;
+            border-left: 4px solid #0078d4;
+        }
+
+        .quote {
+            font-size: 20px; font-style: italic; color: #323130; margin: 16px 0;
+            padding-left: 20px; border-left: 4px solid #0078d4;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-logo">📚 ABCDEFG.1234</div>
+        </div>
+    </div>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <strong>🌐 Lorem Ipsum 🌐 Template 🌐 Best Practices 🌐 Placeholder Guide 🌐</strong>
+        </div>
+    </div>
+
+    <div class="container">
+        <main class="main-content">
+            
+            <!-- SECTION 1 -->
+            <div class="section-divider">☁️☁️☁️ SECTION 1 ☁️☁️☁️</div>
+            
+            <h1>🧪 Lorem Ipsum Administrator’s Guide 🛡️</h1>
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+
+            <div class="metadata">
+                <div class="metadata-item">
+                    <span>📅</span>
+                    <span>Updated: November 25, 2025</span>
+                </div>
+                <div class="metadata-item">
+                    <span>⏱️</span>
+                    <span>45 min read</span>
+                </div>
+            </div>
+
+            <h2>🏁 Core principles for placeholder skepticism</h2>
+
+            <h3><strong>1. 🔎 Independent confirmation of the facts</strong></h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</li>
+                <li>Excepteur sint occaecat cupidatat non proident, sunt in culpa.</li>
+            </ul>
+
+            <h3><strong>2. 📈 Encourage substantive debate</strong></h3>
+            <ul>
+                <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</li>
+                <li>Accusantium doloremque laudantium, totam rem aperiam.</li>
+                <li>Eaque ipsa quae ab illo inventore veritatis et quasi architecto.</li>
+                <li>Beatae vitae dicta sunt explicabo.</li>
+            </ul>
+
+            <h3><strong>3. ⚠️ Arguments from authority carry little weight</strong></h3>
+            <ul>
+                <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</li>
+                <li>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</li>
+                <li>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</li>
+                <li>Consectetur, adipisci velit, sed quia non numquam eius modi tempora.</li>
+            </ul>
+
+            <h3><strong>4. 🧭 Consider multiple hypotheses</strong></h3>
+            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur:</p>
+            <ul>
+                <li>Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</li>
+                <li>Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis.</li>
+                <li>Doloribus asperiores repellat.</li>
+                <li>Temporibus autem quibusdam et aut officiis debitis aut rerum.</li>
+            </ul>
+
+            <h3><strong>5. 📏 Quantify when possible</strong></h3>
+            <ul>
+                <li>At vero eos et accusamus et iusto odio dignissimos ducimus.</li>
+                <li>Qui blanditiis praesentium voluptatum deleniti atque corrupti.</li>
+                <li>Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</li>
+                <li>Similique sunt in culpa qui officia deserunt mollitia animi.</li>
+            </ul>
+
+            <h2>🚨 Red flags in placeholder claims</h2>
+
+            <h3><strong>💸 Cost optimization baloney</strong></h3>
+            <ul>
+                <li>❌ Lorem ipsum dolor sit amet, 70% reduction, sine analysis.</li>
+                <li>❌ Temporibus autem quibusdam, commitment risks ignoratis.</li>
+                <li>❌ Serverless semper vilius est, sine usu patternibus.</li>
+                <li>✅ Monstra metrics et consilia sumptuum.</li>
+            </ul>
+
+            <h3><strong>🏛️ Architecture baloney</strong></h3>
+            <ul>
+                <li>❌ Best practice sine contextu.</li>
+                <li>❌ Nos containeribus opus est, cur?</li>
+                <li>❌ Multi-regio sine ratione beneficii.</li>
+                <li>✅ Adstringe ad necessitates tuas demonstratas.</li>
+            </ul>
+
+            <h3><strong>🔒 Security theater</strong></h3>
+            <ul>
+                <li>❌ Securus sumus quia technologia utimur.</li>
+                <li>❌ Endpointa privata ubique sine consilio.</li>
+                <li>❌ Transivimus scan—quis? quae severitas?</li>
+                <li>✅ Monstra minarum modelum et moderamina.</li>
+            </ul>
+
+            <h3><strong>⚡ Performance claims</strong></h3>
+            <ul>
+                <li>❌ Premium semper citius est.</li>
+                <li>❌ CDN omnia corrigit.</li>
+                <li>❌ Haec magnitudo “quidquid” tractat.</li>
+                <li>✅ Proba cum onere mensuris specificis.</li>
+            </ul>
+
+            <h2>🛠️ Tools for baloney detection</h2>
+
+            <h3><strong>📊 Demand evidence</strong></h3>
+            <ul>
+                <li>Recommendationes cum gradibus impactus.</li>
+                <li>Query exempla usu reali ostendentia.</li>
+                <li>Telemetria mores usorum ostendens.</li>
+                <li>Sumptus per menses comparati et trend.</li>
+            </ul>
+
+            <h3><strong>🧫 Reproducible testing</strong></h3>
+            <ul>
+                <li>IaC ad probationem ambituum.</li>
+                <li>Onus probatio structa et repetibilis.</li>
+                <li>Experimenta chaos ad defectus modos.</li>
+                <li>A/B configurationum probationes.</li>
+            </ul>
+
+            <h3><strong>🔍 Falsifiability test</strong></h3>
+            <p>Interroga: “Quae evidentia hoc refellere posset?”</p>
+            <ul>
+                <li>Si nihil refellere potest, claim technicus non est.</li>
+                <li>“Optima via” criteriis mensurabilibus eget.</li>
+                <li>Documenta commutationes et commoda/incommoda.</li>
+            </ul>
+
+            <h2>💡 Questions to ask (every time)</h2>
+            <ol>
+                <li><strong>🎯 Quid est evidentia?</strong> Data, non fabulae.</li>
+                <li><strong>🧯 Qui sunt modi defectus?</strong> Omnia aliquando deficiunt.</li>
+                <li><strong>💰 Quid est TCO?</strong> Conspectus totus.</li>
+                <li><strong>⏲️ Quae sunt verae SLAe?</strong> Obligationes declaratae.</li>
+                <li><strong>📉 Potest hoc deminui?</strong> Pars frugi.</li>
+                <li><strong>🧪 Probavisti casus defectus?</strong> Exercere defectum.</li>
+                <li><strong>📚 Estne documentatum?</strong> Scientia non sit tacita.</li>
+                <li><strong>🕶️ Quid non dicis?</strong> Trade-offs aperi.</li>
+            </ol>
+
+            <h2>🎭 Common baloney patterns</h2>
+
+            <h3><strong>The “enterprise” hand-wave</strong> 🎩</h3>
+            <ul>
+                <li>“Enterprise-grade” sine definitionibus.</li>
+                <li>Realitas: quas postulationes explicitas convenit?</li>
+            </ul>
+
+            <h3><strong>The bleeding edge fallacy</strong> 🚨</h3>
+            <ul>
+                <li>“Praevisum in productione!”</li>
+                <li>Realitas: periculum et suffragium allinea.</li>
+            </ul>
+
+            <h3><strong>The migration magic</strong> ✨</h3>
+            <ul>
+                <li>“Levamus et movemus; facile est.”</li>
+                <li>Realitas: dependentiae, retia, licentiae.</li>
+            </ul>
+
+            <h3><strong>The savings mirage</strong> 💫</h3>
+            <ul>
+                <li>Computum tantum, egressum et reposita neglecta.</li>
+                <li>Realitas: summa factura mensis.</li>
+            </ul>
+
+            <h2>🎓 The ultimate baloney detector</h2>
+
+            <p><strong>Si haec respondere non possunt, dubita:</strong></p>
+            <ul>
+                <li>Quomodo mensum est?</li>
+                <li>Quid accidit si deficit?</li>
+                <li>Cur haec solutio pro X, Y, Z?</li>
+                <li>Quid constat ad 10×?</li>
+                <li>Ubi sunt documenta/IaC?</li>
+            </ul>
+
+            <hr>
+
+            <h2>🌟 Golden rule</h2>
+
+            <p class="quote">“Extraordinaria postulata extraordinariam evidentiam requirunt.”</p>
+
+            <p><strong>In placeholder verbis: promissa de sumptu, perficiendo, vel disponibilitate requirunt probationem—telemetria, relationes sumptuum, et probationes oneris.</strong> 📈</p>
+
+            <hr>
+
+            <p><em>🔭 Mane curiosus. Mane scepticus. Mane scientificus. Et semper statum servitii prius inspice.</em> 💙</p>
+
+            <!-- SECTION 2 -->
+            <div class="section-divider">☁️☁️☁️ SECTION 2 ☁️☁️☁️</div>
+
+            <h1>Lorem Ipsum Administration Kit 🔎☁️</h1>
+
+            <h2>1. Confirm all facts ✅🔍</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, nisl vitae finibus imperdiet, ligula sem fermentum mi, id dictum nunc urna non purus.</p>
+
+            <h2>2. Welcome debate and multiple hypotheses 🤝💡</h2>
+            <p>Curabitur facilisis, urna et varius volutpat, tellus nisi facilisis mauris, sed tincidunt velit augue a lorem. In hac habitasse platea dictumst.</p>
+
+            <h2>3. Check if claims are falsifiable 🧪⛔</h2>
+            <p>Praesent varius, libero non posuere tincidunt, arcu neque venenatis arcu, ac aliquam ligula nunc vitae leo. Donec ac lorem sed nisi commodo cursus.</p>
+
+            <h2>4. Avoid appeals to ignorance 🕳️❓</h2>
+            <p>Aliquam erat volutpat. Maecenas at risus et nisl cursus mattis at sed mi. Vivamus in purus nec risus mattis gravida.</p>
+
+            <h2>5. Guard against observational selection bias 🔎⚖️</h2>
+            <p>Nunc pulvinar, neque quis pretium lobortis, orci sem efficitur lacus, id ullamcorper ex eros vitae justo. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+
+            <h2>6. Beware of small sample size statistics 📉❗</h2>
+            <p>Phasellus porta, orci vitae tristique condimentum, felis nunc ultricies augue, non cursus ligula lorem at arcu.</p>
+
+            <h2>7. Avoid false dichotomies ⚫⚪</h2>
+            <p>Sed sagittis, nibh at congue venenatis, lacus eros fringilla tortor, eu tincidunt tortor elit sit amet sem. Pellentesque habitant morbi tristique senectus et netus.</p>
+
+            <h2>8. Identify weasel words and slippery slopes 📣🪨</h2>
+            <p>Morbi ut lectus ac nunc vulputate aliquet. Cras at diam ipsum. Integer posuere, lacus sed pharetra iaculis, metus mauris varius nunc, nec mollis erat leo non nunc.</p>
+
+            <h2>9. Independent confirmation needed 📝✔️</h2>
+            <p>Donec fermentum dui id quam placerat, vitae feugiat arcu imperdiet. Vivamus dictum aliquet diam, a tristique sem accumsan nec.</p>
+
+            <h2>10. Use clear definitions 🗂️❌</h2>
+            <p>Quisque vel iaculis est, eget condimentum odio. Integer facilisis, sapien nec posuere mattis, sem nisl fermentum elit, at laoreet augue nisl id neque.</p>
+
+            <hr>
+
+            <p>Nullam quis lorem vitae dui pulvinar posuere. Etiam vehicula, justo at euismod tincidunt, mi erat fermentum lectus, eu facilisis felis magna id arcu.</p>
+
+            <!-- SECTION 3 -->
+            <div class="section-divider">☁️☁️☁️ SECTION 3 ☁️☁️☁️</div>
+
+            <h1>Lorem Ipsum Detection Rules: A Skeptical Guide</h1>
+
+            <h2>Introduction: why placeholders need a detection kit</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id lectus eget arcu suscipit pulvinar. Sed consequat, elit id rutrum finibus, urna felis posuere enim, non cursus risus lorem vitae sem.</p>
+            
+            <p>Vivamus laoreet porttitor risus, in accumsan arcu luctus in. Suspendisse id fringilla lectus. Proin tristique, dui ac tempor bibendum, nunc nisi feugiat nunc, vitae faucibus mi purus eget urna.</p>
+
+            <hr>
+
+            <h2>Principles adapted for lorem ipsum</h2>
+            <p>Curabitur nec nunc id odio lacinia eleifend. Mauris porttitor viverra elit, sit amet convallis nunc convallis at. Proin feugiat, lorem et dictum posuere, tellus eros accumsan magna, et sodales massa urna non arcu.</p>
+
+            <hr>
+
+            <h2>The detection rules</h2>
+
+            <h3>Rule 1: independent confirmation 🔎✅</h3>
+            <p><strong>Nulla facilisi. Donec sagittis velit nec massa vulputate, sit amet dictum dolor dapibus.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Vivamus pretium tortor id cursus cursus. Integer nec justo at nisl iaculis viverra.</li>
+            </ul>
+            
+            <p><strong>Diagram: Independent confirmation flow</strong></p>
+            <pre><code>Claim Made
+   |
+   v
+Seek Documentation --> Peer Review --> Test in Lab
+   |                    |                  |
+   v                    v                  v
+  Confirmed? --------> Yes/No Decision</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Pellentesque id turpis et risus ultricies lacinia. Cras posuere viverra lorem, vitae volutpat justo dapibus non. Sed sodales, arcu vel commodo hendrerit, metus ligula fermentum augue, a malesuada mi sem sit amet mi.</p>
+
+            <hr>
+
+            <h3>Rule 2: encourage substantive debate 📣⚖️</h3>
+            <p><strong>Praesent ac sem justo. Fusce ut volutpat justo, a sagittis sem.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Nam vel sodales arcu. Etiam at velit at nibh dictum luctus vel non justo.</li>
+            </ul>
+
+            <p><strong>Diagram: Debate structure</strong></p>
+            <pre><code>Proponent Argument --> Evidence Presented
+Skeptic Counterargument --> Evidence Presented
+Moderator Ensures Fairness
+Outcome: Decision Based on Evidence</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Integer bibendum, nibh vitae congue gravida, orci velit tincidunt lectus, vel pulvinar magna eros eu arcu. Vestibulum vel ex quis sem dapibus posuere.</p>
+
+            <hr>
+
+            <h3>Rule 3: beware arguments from authority 🏷️⛔</h3>
+            <p><strong>Morbi nec metus nec justo pretium tincidunt. Etiam consequat aliquet mi, sed facilisis justo.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Donec volutpat, justo ut sagittis gravida, sem magna imperdiet urna, ac aliquet libero urna et metus.</li>
+            </ul>
+
+            <p><strong>Diagram: Authority claim evaluation</strong></p>
+            <pre><code>Authority Claim
+   |
+   v
+Is Evidence Provided? --> Yes/No
+   |
+   v
+If No: Request Evidence or Test Independently</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Curabitur varius, velit quis imperdiet feugiat, lectus lacus hendrerit dolor, ut gravida sapien magna ut mi.</p>
+
+            <hr>
+
+            <h3>Rule 4: generate multiple hypotheses 🧭🌿</h3>
+            <p><strong>Aliquam in venenatis mi. Proin volutpat arcu at libero lacinia, non rhoncus orci facilisis.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Aenean finibus, mi non placerat pellentesque, arcu leo faucibus mi, et ultrices ante urna sed urna.</li>
+            </ul>
+
+            <p><strong>Diagram: Incident hypothesis tree</strong></p>
+            <pre><code>Incident Detected
+   |
+   +-- Hypothesis 1: Network/Access
+   |
+   +-- Hypothesis 2: Configuration/Change
+   |
+   +-- Hypothesis 3: Platform/Dependency
+   |
+   +-- Hypothesis 4: Workload/Capacity</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Sed eu nisl vel justo faucibus luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+
+            <hr>
+
+            <h3>Rule 5: detach from your hypothesis 🧪↩️</h3>
+            <p><strong>Aenean tincidunt, lorem non ultricies cursus, enim justo tristique augue, non rhoncus arcu nulla sed magna.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Suspendisse potenti. Vivamus a turpis sit amet lorem sollicitudin congue.</li>
+            </ul>
+
+            <p><strong>Diagram: Hypothesis testing loop</strong></p>
+            <pre><code>Form Hypothesis
+   |
+   v
+Test Hypothesis
+   |
+   v
+Supported? --> Yes: Proceed | No: Form New Hypothesis</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Morbi varius turpis vel arcu faucibus, at pulvinar dui feugiat. Duis quis nibh at mi imperdiet vehicula.</p>
+
+            <hr>
+
+            <h3>Rule 6: quantify — SLIs, SLOs, and error budgets 📊⚙️</h3>
+            <p><strong>Nulla eu magna in sem pharetra gravida. Integer vitae arcu eget libero pretium consequat.</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Target (SLO)</th>
+                        <th>Actual (SLI)</th>
+                        <th>Error budget remaining</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Uptime</td>
+                        <td>99.95%</td>
+                        <td>99.97%</td>
+                        <td>13 min</td>
+                    </tr>
+                    <tr>
+                        <td>API latency</td>
+                        <td>&lt;200ms</td>
+                        <td>180ms</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>Auth failures</td>
+                        <td>&lt;0.1%</td>
+                        <td>0.05%</td>
+                        <td>50%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Analysis:</strong><br>
+            Vestibulum congue, justo nec imperdiet posuere, arcu urna tempor dui, at aliquet lectus tellus sed dui.</p>
+
+            <hr>
+
+            <h3>Rule 7: verify every link in the chain 🔗🔍</h3>
+            <p><strong>Integer dictum, nibh at pretium pretium, orci nibh porta enim, vitae pretium dui mauris in massa.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Maecenas vitae arcu quis massa maximus gravida et at nunc.</li>
+            </ul>
+
+            <p><strong>Diagram: Chain of dependencies</strong></p>
+            <pre><code>User --> App Gateway --> Web App --> API --> Database --> Storage
+         |              |         |        |
+         v              v         v        v
+    NSG Config     Managed ID   RBAC   Encryption</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Pellentesque tincidunt, sapien sed condimentum iaculis, tortor urna molestie quam, non bibendum erat urna at risus.</p>
+
+            <hr>
+
+            <h3>Rule 8: apply Occam’s razor 🪒🧠</h3>
+            <p><strong>Donec sit amet justo a metus posuere tristique. Praesent efficitur sem nec leo ultricies.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Curabitur non aliquam leo, sed malesuada dolor.</li>
+            </ul>
+
+            <p><strong>Diagram: Troubleshooting decision tree</strong></p>
+            <pre><code>Symptom: Web App Down
+   |
+   +-- Simple: Certificate Expired?
+   |
+   +-- Simple: Recent Config Change?
+   |
+   +-- Complex: Platform Bug?</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+                Nulla facilisi. Integer ac efficitur nibh. Suspendisse potenti.</p>
+
+            <hr>
+
+            <h3>Rule 9: ensure falsifiability 🔍🚫</h3>
+            <p><strong>Fusce commodo, risus id gravida viverra, nibh urna imperdiet nibh, non pulvinar lectus lacus nec metus.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Sed laoreet, augue ac dapibus pretium, leo mi fermentum risus, non egestas nisl erat a nisl.</li>
+            </ul>
+
+            <p><strong>Diagram: Falsifiability test</strong></p>
+            <pre><code>Claim: All Resources Compliant
+   |
+   v
+Compliance Scan --> Attempt to Violate Policy
+   |
+   v
+Pass? --> Yes: Supported | No: Falsified</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Quisque tempor purus at dui varius, sed commodo arcu scelerisque.</p>
+
+            <hr>
+
+            <h3>Rule 10: reproducibility — IaC and automation ♻️🤖</h3>
+            <p><strong>Sed id tempor ante. Integer id est sit amet magna tempor sodales.</strong></p>
+            <ul>
+                <li><strong>Example:</strong> Cras auctor risus et sagittis ultricies.</li>
+            </ul>
+
+            <p><strong>Diagram: Deployment pipeline</strong></p>
+            <pre><code>Code Commit --> CI/CD --> Test Env --> Production
+   |                            |
+   v                            v
+IaC Template               Automated Tests</code></pre>
+
+            <p><strong>Analysis:</strong><br>
+            Etiam in nisi non nisl porttitor porttitor. Pellentesque tempus ultrices lectus.</p>
+
+            <hr>
+
+            <h2>Summary table: detection rules</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule #</th>
+                        <th>Name</th>
+                        <th>Core principle</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Independent confirmation 🔎✅</td><td>Verify claims with evidence</td><td>Test assertions</td></tr>
+                    <tr><td>2</td><td>Substantive debate 📣⚖️</td><td>Encourage open discussion</td><td>Design reviews</td></tr>
+                    <tr><td>3</td><td>Authority skepticism 🏷️⛔</td><td>Evidence over titles</td><td>Request documentation</td></tr>
+                    <tr><td>4</td><td>Multiple hypotheses 🧭🌿</td><td>Consider alternate causes</td><td>Troubleshooting</td></tr>
+                    <tr><td>5</td><td>Hypothesis detachment ↩️</td><td>Be ready to pivot</td><td>Change diagnosis</td></tr>
+                    <tr><td>6</td><td>Quantify 📊⚙️</td><td>Use metrics and budgets</td><td>SLI/SLO tracking</td></tr>
+                    <tr><td>7</td><td>Chain verification 🔗🔍</td><td>Validate dependencies</td><td>Configuration audits</td></tr>
+                    <tr><td>8</td><td>Occam’s Razor 🪒</td><td>Prefer simplest fit</td><td>Troubleshooting order</td></tr>
+                    <tr><td>9</td><td>Falsifiability 🔍🚫</td><td>Testable assertions</td><td>Compliance scans</td></tr>
+                    <tr><td>10</td><td>Reproducibility ♻️🤖</td><td>Automation/IaC</td><td>Repeatable deployments</td></tr>
+                </tbody>
+            </table>
+
+            <hr>
+
+            <h2>Conclusion: building a culture of reliable operations</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a arcu at libero pellentesque faucibus. Cras nec pretium mauris, sit amet congue ipsum.</p>
+
+            <p>Morbi quis mi venenatis, varius turpis a, bibendum tellus. Aenean at ligula nec nibh rhoncus posuere.</p>
+
+            <hr>
+
+            <h2>Appendix: sample plain-text diagram — incident response playbook</h2>
+            <pre><code>+---------------------+
+| Incident Detected   |
++---------------------+
+          |
+          v
++---------------------+
+| Triage & Severity   |
++---------------------+
+          |
+          v
++---------------------+
+| Containment         |
++---------------------+
+          |
+          v
++---------------------+
+| Mitigation/Recovery |
++---------------------+
+          |
+          v
++---------------------+
+| Communication       |
++---------------------+
+          |
+          v
++---------------------+
+| Postmortem Review   |
++---------------------+
+          |
+          v
++---------------------+
+| Process Improvement |
++---------------------+</code></pre>
+
+            <hr>
+
+            <h2>Final thoughts</h2>
+            <p>Nulla vitae risus porttitor, posuere sem sit amet, pulvinar arcu. Sed interdum, dui non mattis porttitor, nibh lectus pharetra lacus, eget aliquet arcu turpis a tortor.</p>
+
+            <p><strong>Manete sceptici, curiosi, et discite semper.</strong></p>
+
+            <!-- SECTION 4 -->
+            <div class="section-divider">☁️☁️☁️ SECTION 4 ☁️☁️☁️</div>
+
+            <h1>☁️ Lorem Ipsum Architect’s Toolkit 🧑‍🔧</h1>
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer convallis sem a nisi efficitur, sed dictum lorem viverra.</p>
+
+            <hr>
+
+            <h2>🧰 The toolkit: placeholder instruments</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Principle</th>
+                        <th>Description</th>
+                        <th>Generic application & example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Confirm the facts independently</strong></td>
+                        <td>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</td>
+                        <td><strong>Application:</strong> Vendor dicit “solum” consilium. <strong>Action:</strong> Confirma cum documentis et recensionibus. 📈</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Encourage substantive debate</strong></td>
+                        <td>Comparare vias aperte cum evidentia et mensuris.</td>
+                        <td><strong>Application:</strong> Topologia A vs. B. <strong>Action:</strong> Praesenta sumptus, latentiam, et onus gestum. 🗣️</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Beware authority fallacies</strong></td>
+                        <td>Tituli non sunt evidentia.</td>
+                        <td><strong>Application:</strong> Mandatum arbitrium. <strong>Action:</strong> Oppone cum documentis et normis. 👨‍💻</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Avoid the straw man</strong></td>
+                        <td>Alternativas recte repraesenta.</td>
+                        <td><strong>Application:</strong> IaaS vs. PaaS. <strong>Action:</strong> Trade-off controlis et commoditatis agnosce. 🧱</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Employ Occam’s razor</strong></td>
+                        <td>Simplex solutio praeferenda si aequaliter explicat.</td>
+                        <td><strong>Application:</strong> App tarda. <strong>Action:</strong> Basa prius inspice quam complexa addas. 🪒</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. Check for slippery slopes</strong></td>
+                        <td>Postulationes inevitabilitatis probandae sunt.</td>
+                        <td><strong>Application:</strong> “Unus log budget exhaurit.” <strong>Action:</strong> Praevide sumptus et limites pone. 🧮</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. Ask falsifiable questions</strong></td>
+                        <td>Define quod claim refellere possit.</td>
+                        <td><strong>Application:</strong> “Privatum = nullus publicus.” <strong>Action:</strong> Conare publicum accessum. ✅</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>🧠 The skeptical mindset</h2>
+            <ul>
+                <li><strong>Interroga omnia:</strong> Costus, operationes, perficiendum, fiducia, securitas.</li>
+                <li><strong>Quaere data, non dogma:</strong> Telemetria, relationes, probationes.</li>
+                <li><strong>Nosce biases tuas:</strong> Favor recens disciplinae ≠ aptitudo.</li>
+                <li><strong>Paratus eris errare:</strong> Veritas ante superbiam.</li>
+            </ul>
+
+            <p>Adhibe hunc apparatum ad claritatem in decisionibus. Felicem architecturam! 🏗️💡</p>
+
+            <!-- SECTION 5 -->
+            <div class="section-divider">☁️☁️☁️ SECTION 5 ☁️☁️☁️</div>
+
+            <h1>Lorem Ipsum Migration Strategy Kit</h1>
+            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+
+            <div class="note">
+                <h3>Introduction</h3>
+                <p>Curabitur pretium, metus ut bibendum ultrices, augue nunc tristique neque, non faucibus lacus neque nec justo. Integer nec lectus nisi. Proin ornare, leo vitae tincidunt venenatis, odio libero sollicitudin felis, sit amet bibendum nisl odio sit amet nibh.</p>
+            </div>
+
+            <h2>The detection tools</h2>
+
+            <div class="tool">
+                <div class="tool-number">Tool 1</div>
+                <h3>Seek independent confirmation of “facts”</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li>Ne confidas solum aestimationibus venditoris.</li>
+                    <li>Collige plures opiniones technicas.</li>
+                    <li>Valida perficiendum per POC.</li>
+                    <li>Confer sumptus cum calculis independenter.</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>“Lift-and-shift semper celerrimum est.”</li>
+                        <li>Sumptus ex solis calculis venditoris.</li>
+                        <li>Consilium ante pervestigationem technicam completam.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 2</div>
+                <h3>Encourage substantive debate</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li>Include scepticos et fautores.</li>
+                    <li>Infra vs. App teams data compareant.</li>
+                    <li>DB, Dev, Ops una disceptent.</li>
+                    <li>Provoca assumptiones aperte.</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>Unus arbiter decernit.</li>
+                        <li>Turmae clausae sine trans-review.</li>
+                        <li>Mandatum sine inputu technico.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 3</div>
+                <h3>Authority ≠ truth</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li>Tendencies industriae non dictant contextum tuum.</li>
+                    <li>Favor servitii non semper convenit oneri tuo.</li>
+                    <li>Praeferentiae ducum necessitatibus occurrere debent.</li>
+                    <li>“Optimarum consuetudinum” validatio eget.</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>“Dicunt nos debere; ergo facimus.”</li>
+                        <li>“Competitor fecit; oportet nos.”</li>
+                        <li>“Consultor: unica via moderna.”</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 4</div>
+                <h3>Spin more than one hypothesis</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li>Considera quinque strategias omnes.</li>
+                    <li>Modela nunc vs. postea gradatim.</li>
+                    <li>Evita unam magnitudinem omnibus.</li>
+                    <li>Considera hybridas per ordines.</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>“Nos X sumus; omnia fiunt X.”</li>
+                        <li>Assume omnia legata reficienda.</li>
+                        <li>Ignora optionem nihil/retire.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 5</div>
+                <h3>Detach from ownership bias</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li>Creatoris bias ad rebuild.</li>
+                    <li>Novitii bias ad replace.</li>
+                    <li>Infra rehost amat; dev rebuild amat.</li>
+                    <li>Observa lapsum sumptuum.</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>“Ego feci; rescribendum est.”</li>
+                        <li>“Iam planum; desistere non possumus.”</li>
+                        <li>Defensio contra nova evidentia.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 6</div>
+                <h3>Quantify decisions</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li>Calcula sumptus actualis per strategiam.</li>
+                    <li>Mensa perficiendi baselines.</li>
+                    <li>Aestima laborem in punctis/hebdomadibus.</li>
+                    <li>Debitum technicum numerice tracta.</li>
+                    <li>Pone criteria numerica successus.</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>“Melius erit”—quo mensura?</li>
+                        <li>“Solvit se”—ostende ROI.</li>
+                        <li>“Containeribus opus est”—requisita?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 7</div>
+                <h3>Every link in the chain must work</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li><strong>Chain:</strong> Rearchitect → microservices → scale → 10× growth
+                        <ul>
+                            <li>Verifica quaelibet: postulatio, bottlenecks, maturitas operandi.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Chain:</strong> Rehost → save time → meet deadline → exit DC
+                        <ul>
+                            <li>Verifica celeritatem, licentias, latentiam.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>Catena cum uno nexu debili.</li>
+                        <li>Ratiocinatio circulare de “modernitate”.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 8</div>
+                <h3>Occam’s razor</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li><strong>Simpler:</strong> Rehost primo, optimize postea.</li>
+                    <li><strong>Complex:</strong> Rearchitect + mesh + refactor DB.</li>
+                    <li>Si utrumque convenit, simpla elige.</li>
+                    <li>Noli over-engineer sine evidentia.</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>Rearchitect ubi refactor sufficit.</li>
+                        <li>Rebuild ubi replace valet.</li>
+                        <li>Addere tech sine requisitis.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 9</div>
+                <h3>Falsify hypotheses</h3>
+                <h4>Applied to migration:</h4>
+                <ul>
+                    <li><strong>Good:</strong> “Managed DB minuit horas DBA 50%”
+                        <ul><li>Mensura ante et post.</li></ul>
+                    </li>
+                    <li><strong>Bad:</strong> “Rearchitecture nos agiles faciet”
+                        <ul><li>Definis metrics agilitas.</li></ul>
+                    </li>
+                    <li>Define quid refellere possit.</li>
+                    <li>Pone checkpoints (e.g., POC tempus).</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>“Future-proof” postulata.</li>
+                        <li>“Modernization” sine criteriis.</li>
+                        <li>Nulla metrica ante initium.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tool">
+                <div class="tool-number">Tool 10</div>
+                <h3>Look for bias</h3>
+                <h4>Common biases:</h4>
+                <ul>
+                    <li><strong>Resume-driven:</strong> Complexitatem pro discendo.</li>
+                    <li><strong>Not-invented-here:</strong> SaaS recusatio.</li>
+                    <li><strong>Sunk cost:</strong> Perseverantia consilii fallentis.</li>
+                    <li><strong>Recency:</strong> Praefer last success.</li>
+                    <li><strong>Availability:</strong> Memoria vividum nimis pensatur.</li>
+                </ul>
+                <h4>Questions to ask:</h4>
+                <ul>
+                    <li>Quis complexity lucratur?</li>
+                    <li>Quid eligeremus si novi essemus?</li>
+                    <li>Technicalne an politicum solvimus?</li>
+                </ul>
+                <div class="red-flags">
+                    <h4>⚠️ Red flags:</h4>
+                    <ul>
+                        <li>Consilium ante requisita.</li>
+                        <li>Standarda inaequalia sine causa.</li>
+                        <li>Intuitus datae praeferuntur.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>The scenarios</h2>
+
+            <div class="scenario">
+                <h3>Scenario A: “We must rearchitect everything”</h3>
+                <h4>Apply the toolkit:</h4>
+                <ul>
+                    <li>(Tool 4) Considera monolithum modularum vel replace.</li>
+                    <li>(Tool 6) Quantifica beneficium; monstra onera.</li>
+                    <li>(Tool 10) Examina bias curriculum.</li>
+                    <li>(Tool 8) Praefer simpla si idem praestat.</li>
+                </ul>
+            </div>
+
+            <div class="scenario">
+                <h3>Scenario B: “Just lift-and-shift—it’s fastest”</h3>
+                <h4>Apply the toolkit:</h4>
+                <ul>
+                    <li>(Tool 6) Calcula sumptus post migrationem.</li>
+                    <li>(Tool 7) Verifica catena ultra deadline.</li>
+                    <li>(Tool 1) Valida sumptus independenter.</li>
+                    <li>(Tool 4) Compara TCO ad 3 annos.</li>
+                </ul>
+            </div>
+
+            <div class="scenario">
+                <h3>Scenario C: “Legacy is technical debt—rebuild”</h3>
+                <h4>Apply the toolkit:</h4>
+                <ul>
+                    <li>(Tool 5) Identifica bias dominii.</li>
+                    <li>(Tool 6) Quantifica impactum verum.</li>
+                    <li>(Tool 9) Define criteria defectus.</li>
+                    <li>(Tool 4) Considera refactor/replace.</li>
+                </ul>
+            </div>
+
+            <div class="scenario">
+                <h3>Scenario D: “Replace with SaaS”</h3>
+                <h4>Apply the toolkit:</h4>
+                <ul>
+                    <li>(Tool 1) Valida requisita vs. venditio.</li>
+                    <li>(Tool 6) Computa sumptus totales.</li>
+                    <li>(Tool 7) Verifica integrationem et portabilitatem.</li>
+                    <li>(Tool 3) Noli praesumere scientiam venditoris.</li>
+                </ul>
+            </div>
+
+            <div class="checklist">
+                <h2>Critical questions checklist</h2>
+                <p>Antequam consilium figas, responde:</p>
+                <ol>
+                    <li><strong>Quid problema solvimus?</strong></li>
+                    <li><strong>Quid est sumptus nihil facientis?</strong></li>
+                    <li><strong>Quae sunt scopae quantificatae?</strong></li>
+                    <li><strong>Quae est solutio simplicissima?</strong></li>
+                    <li><strong>Quid refellere hoc posset?</strong></li>
+                    <li><strong>Quis a complexitate lucratur?</strong></li>
+                    <li><strong>Quae biases adsunt?</strong></li>
+                    <li><strong>Probavimus hypothesis?</strong></li>
+                    <li><strong>Quae est exitus ratio?</strong></li>
+                    <li><strong>Eligeremus hoc nostro sumptu?</strong></li>
+                </ol>
+            </div>
+
+            <h2>The truth about the 5 Rs</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Best for</th>
+                        <th>Worst for</th>
+                        <th>Detector</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Rehost</strong></td>
+                        <td>Motus celeri, periculum humile</td>
+                        <td>Optimatio sumptuum longorum</td>
+                        <td>“Celerrimum” ≠ vilissimum in 3 annos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Refactor</strong></td>
+                        <td>Debitum moderatum, via clara</td>
+                        <td>Systemata valde copulata</td>
+                        <td>Noli refactor propter modum</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rearchitect</strong></td>
+                        <td>Bottlenecks scalae</td>
+                        <td>Apps stabiles, turmae novae</td>
+                        <td>Microservices non sunt praedef.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rebuild</strong></td>
+                        <td>Stacka insustentabilis</td>
+                        <td>Systemata bene operantia</td>
+                        <td>A capite saepe 2× budget, 3× tempus</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Replace</strong></td>
+                        <td>Functiones communes</td>
+                        <td>Differentiatores nuclei</td>
+                        <td>SaaS ≠ semper simplicior/vilior</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="wisdom">
+                <h2>Final wisdom</h2>
+                <p class="quote">“Extraordinaria postulata extraordinariam evidentiam requirunt.”</p>
+                <h4>In migratione:</h4>
+                <ul>
+                    <li>Rebuild celerior quam refactor? Monstra consilium.</li>
+                    <li>Sumptus 50% minuntur? Monstra TCO.</li>
+                    <li>“Oportet” uti technologia X? Monstra postulata scalae.</li>
+                    <li>SaaS omnia solvit? Monstra gap analysis.</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Consilia nitantur in evidentia, non in fastu aut affectu.</strong></p>
+            </div>
+
+            <div class="usage-box">
+                <h2>How to use this kit</h2>
+                <ol>
+                    <li><strong>Communica cum turma tua</strong></li>
+                    <li><strong>Adhibe 2–3 instrumenta per decisionem</strong></li>
+                    <li><strong>Fove disputationem sanam</strong></li>
+                    <li><strong>Revisit cum evidentia mutat</strong></li>
+                    <li><strong>Mensa exitus et disce</strong></li>
+                </ol>
+                <p style="margin-top: 20px; font-size: 1.1em;"><strong>Optima strategia verum problema solvit, non quod sonat magnificum.</strong></p>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <p><strong>“Aliquis, alicubi, aliquid utile exspectat cognosci.”</strong></p>
+            <p style="margin-top: 10px;">Saepe, illud “aliquid” est simplicissima solutio quae re vera operatur.</p>
+            <p style="margin-top: 20px;">
+                <a href="#" target="_blank" style="color: #0078d4; text-decoration: none;">Learn more about lorem ipsum →</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
